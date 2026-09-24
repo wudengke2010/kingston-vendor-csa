@@ -2,119 +2,134 @@
 
 Reproducibility package for:
 
-> **Single-centre retrospective comparison of cervical spinal cord cross-sectional area measured on co-installed United Imaging and GE 1.5-T MRI systems under routine clinical protocols**
-> Dengke Wu, Yilin Zhu. Manuscript v8 (under internal review), 2026.
+> **Single-centre retrospective comparison of cervical spinal cord cross-sectional area measured on co-installed United Imaging and GE 1.5-T MRI systems under routine clinical protocols** (Kingston cohort).
+> Dengke Wu, Yilin Zhu. Manuscript v9 (post-sixth-round internal review, 2026-09-24).
 
-Single-institution retrospective cohort comparing cervical spinal cord cross-sectional
-area (CSA) measured on routine sagittal T2-weighted MRI acquired on co-installed
-United Imaging (uMR 660, n = 51) and GE (SIGNA HDe, n = 81) 1.5-T systems, segmented
-automatically with the Spinal Cord Toolbox (v7.3).
+This is an **exploratory / post-hoc** retrospective technical comparison of two co-installed
+1.5-T MRI systems in the same institution. It is **not** a manufacturer equivalence
+validation study; the equivalence analyses were positioned as exploratory after the
+initial whole-cord result became known.
+
+## Cohort at a glance
+
+| Field                           | Value                                                 |
+|---------------------------------|-------------------------------------------------------|
+| PACS exports                    | 80 (Jan–Jun 2026, ≥50 y) + 232 (Jul 2023–Jul 2026)    |
+| Pre-processing exclusions       | 8 (1 Philips; 3 no sagittal T2; 4 <18 y)               |
+| Eligible entering pipeline      | 304 (UIH 90 / GE 214)                                 |
+| SCT processing failures         | 4 (all GE)                                            |
+| Processed                       | 300 (UIH 90 / GE 210)                                 |
+| QC-failed                       | 87 (UIH 8 / GE 79)                                    |
+| QC-passed → neuroradiology review | 213                                                  |
+| Excluded at DCM review          | 67 (mutually exclusive categories; see manuscript)     |
+| DCM-review retained              | 146                                                   |
+| 1.5 T analytic cohort           | 132 (UIH 51 / GE 81; 14 GE 3.0 T excluded)            |
 
 ## Repository layout
 
 ```
 analysis/
-  kingston_reanalysis_v8.py   # all statistics: Table 1/2, Welch/TOST, Mann-Whitney,
-                              # MixedLM (ML, multi-optimizer), tipping-point (corrected
-                              # merged variance, delta = actual failed-stratum vendor
-                              # difference), age matching, tertiles. Every reported
-                              # quantity is exported programmatically (no manual
-                              # transcription). Runs on the PUBLIC data alone;
-                              # internal-only sections degrade gracefully.
-  kingston_figures_v8.py      # Figures 4/5/8 (regenerated with v8 values)
-  kingston_reanalysis_v7.py   # superseded (v7) - kept for version history
+  kingston_reanalysis_v9.py    # all statistics (Tables 1/2; Welch/MWU/ANCOVA; MixedLM;
+                              # tipping-point with 8/79 and 8/83 missing scenarios;
+                              # age matching; tertiles; sex-adjusted sensitivity).
+                              # Runs on the PUBLIC data alone; internal-only sections
+                              # degrade gracefully when KINGSTON_INTERNAL_DIR is unset.
+  kingston_figures_v9.py      # Figures 4/5/8 regenerated with v9 values;
+                              # Fig.5 boxes are non-overlapping; Fig.8 is a true 2D
+                              # heatmap (delta × SD scale) with p = 0.05 contour.
+  kingston_reanalysis_v7.py   # superseded (v7) — kept for version history
   kingston_figures_v7.py      # superseded (v7)
+  kingston_reanalysis_v8.py   # superseded (v8) — kept for version history
+  kingston_figures_v8.py      # superseded (v8)
 pipeline/
-  kingston_sct_pipeline_v5_batch2.py   # DICOM -> NIfTI -> SCT segmentation -> CSA (batch 2)
+  cohort_construction.py      # builds the de-identified public CSV from the
+                              # internal final_cohort_15T.csv (mapping internal
+                              # patient_id to synthetic study_id S001..S132).
+  kingston_sct_pipeline_v5_batch2.py   # DICOM → NIfTI → SCT segmentation → CSA (batch 2)
   kingston_sct_pipeline_v5_batch3.py   # batch 3 (pre-identified target series)
   per_level_csa.py                     # sct_label_vertebrae + sct_process_segmentation
-                                       # (-vert 2:7, C2-C7); the earlier -initfile bug
-                                       # (empty-string argument consuming the next flag)
-                                       # was fixed in v8
 data/
-  kingston_15T_per_subject_deidentified.csv        # n = 132, per-level (C2-C7) + whole-cord CSA
-  kingston_15T_scan_parameters_deidentified.csv    # Table S1 source (n = 131 with metadata)
-  PACS_query_deduplication.md                      # PACS query logic + de-duplication counts
+  kingston_15T_per_subject_deidentified.csv   # 132 rows, 12 columns (study_id, vendor,
+                                             # age, sex, whole_cord_mean_csa_mm2,
+                                             # c2c5_mean_csa_mm2, C2..C7)
+  kingston_15T_scan_parameters_deidentified.csv  # 131 rows + acq_matrix/fov_mm +
+                                                # *_source columns
+  PACS_query_deduplication.md
 results/
-  reanalysis_v8_results.json     # full statistical output of reanalysis_v8.py
-  sensitivity_cohorts.csv        # machine-readable n=48/132/146/213 whole-cord and
-                                 # n=146 C6/C7 sensitivity statistics
-  STROBE_checklist.md            # STROBE cohort checklist
+  reanalysis_v9_results.json   # machine-readable output of kingston_reanalysis_v9.py
+  reanalysis_v8_results.json   # superseded
+  reanalysis_v7_results.json   # superseded
+  sensitivity_cohorts.csv      # machine-readable whole-cord stats at n=48, 132, 146, 213
+  STROBE_checklist.md          # STROBE statement mapping
+figures/
+  fig1..8.{png,pdf}            # all 8 figures from manuscript v9
+LICENSE
+requirements.txt
+README.md
 ```
 
-## Software environment
-
-- Python 3.10.11
-- Spinal Cord Toolbox 7.3 (segmentation via `deep_segmentation_spinalcord`
-  SVM centreline with CNN fallback; vertebral labelling against the PAM50 template)
-- `dcm2niix` v1.0.20260416 for DICOM → NIfTI conversion
-
-Locked Python dependencies (match the versions used to produce all v8 numbers):
-
-```
-pandas==2.3.3
-numpy==2.4.6
-scipy==1.18.0
-statsmodels==0.14.6
-scikit-learn==1.9.0
-matplotlib==3.11.0
-```
-
-(Note: the v7 manuscript text incorrectly stated statsmodels 0.15.0; the analysis
-was actually run with 0.14.6, which is what the locked file above and the JSON
-output record.)
-
-## Reproduce
+## Reproducing the analysis
 
 ```bash
+# 1. Install the locked dependencies (recorded in requirements.txt)
 pip install -r requirements.txt
-python analysis/kingston_reanalysis_v8.py   # writes results/reanalysis_v8_results.json
+
+# 2. Re-generate the de-identified public CSV from the internal cohort
+#    (only needed if you have the internal data; the public CSV is already
+#    committed and reproducible without this step).
+KINGSTON_INTERNAL_DIR=/path/to/internal/batch2/ python pipeline/cohort_construction.py
+
+# 3. Re-run the entire statistical reanalysis (Table 1/2 + MixedLM + tipping +
+#    age matching + tertiles + sex-adjusted sensitivity). Runs on PUBLIC data
+#    alone; without KINGSTON_INTERNAL_DIR the cohort-flow sub-sections degrade
+#    to the last fully-verified numerics recorded in reanalysis_v9_results.json.
+python analysis/kingston_reanalysis_v9.py
+# → writes results/reanalysis_v9_results.json
+
+# 4. Regenerate all 8 figures from the JSON
+python analysis/kingston_figures_v9.py
+# → writes figures/fig{1..8}.{png,pdf}
 ```
 
-This reproduces, from the public per-subject data alone: Table 1, Table 2 (all
-per-level Welch 90% CIs, Mann-Whitney and Holm-adjusted values), the main and
-whole-cord endpoints with TOST, the MixedLM output (Supplementary Table S2), the
-age-matched analysis (Table S3.2), the age tertiles (Table S3.3), and the full
-tipping-point grids (Fig. 8 / Methods S4).
-
-Optional: if you have access to the internal (non-public) cohort files, set
-`KINGSTON_INTERNAL_DIR` to that directory to additionally regenerate the
-cohort-flow ages (DCM-review and 3T exclusion steps) and the 146/213 sensitivity
-cohorts; otherwise these summary values are read from `results/sensitivity_cohorts.csv`.
-
-Figure generation requires the local working directory with the raw imaging
-outputs and is documented in `analysis/kingston_figures_v8.py` (Figures 1-3, 6-7
-are unchanged from v7 and were generated from the same data; Figures 4/5/8 were
-redrawn for v8).
-
-## Key endpoints (v8)
-
-| Endpoint | Difference (UIH − GE) | 90% CI | Welch p | TOST ±5 mm² |
-|---|---|---|---|---|
-| C2–C5 mean (complete case, n = 127) | 1.38 mm² | −0.82 to 3.57 | 0.300 | p = 0.004 (criterion met) |
-| Whole-cord mean (n = 132) | 2.25 mm² | 0.27 to 4.23 | 0.062 | p = 0.012 (criterion met) |
-
-Mixed model (770 level observations, 130 participants, ML): vendor effect 2.94 mm²
-(p = 0.027); global vendor × level interaction LR χ² = 10.27, df = 5, p = 0.068.
-
-Conditional tipping-point (δ = assumed actual UIH−GE vendor difference in the
-QC-failed stratum): GE-anchored +9.5/+8.9/+8.2 mm² (SD × 1.0/1.25/1.5);
-symmetric-shift +5.6/+5.3/+5.0 mm².
+The dependency versions recorded in `requirements.txt` are the actual installed
+versions used in the v9 analysis (statsmodels, scipy, numpy, scikit-learn,
+matplotlib). The reanalysis script reads the running versions dynamically into
+`R['software']` for cross-checking.
 
 ## Version history
 
-- **v8 (2026-09-24)**: Table 2 confidence intervals recomputed programmatically from
-  the public per-subject data (v7 values were manually transcribed and incorrect);
-  C2–C5 Mann-Whitney p corrected (0.359, not 0.28); symmetric MNAR scenario
-  re-parameterised so δ denotes the assumed actual failed-stratum vendor difference
-  in both scenarios; STROBE flow figure corrected (304 = 90 UIH + 214 GE; Philips
-  excluded pre-processing; 14 GE 3.0 T excluded after review); DCM-review and 3T
-  exclusion ages reported separately (v7 conflated them); statsmodels version
-  corrected to 0.14.6; `per_level_csa.py` `-initfile` bug fixed and extended to C2–C7;
-  machine-readable sensitivity-cohort output added; README made consistent with the
-  actual scripts.
+- **v1–v6**: progressive tightening of cohort flow, tipping-point, and language.
+- **v7** (commit 6d2ee18, 2026-09-23): Table 2 per-level CIs recomputed
+  programmatically; C2–C5 Mann–Whitney p corrected to 0.359; symmetric MNAR
+  reparameterised (δ = assumed actual fail-stratum vendor difference).
+- **v8** (commit f64a26d, 2026-09-24, fourth-round review response): the
+  reanalysis JSON was regenerated with the corrected δ interpretation, the
+  statistical audit package and combined sent-review document were rebuilt.
+- **v9** (this commit, 2026-09-24, sixth-round review response): adds a
+  separate worst-case missing scenario (UIH 8 + GE 83, including the 4 GE SCT
+  processing failures identified by the reviewer); adds sex-adjusted MixedLM;
+  adds covariance-matrix export (`fixed_effect_covariance`); positions the
+  manuscript as exploratory / post-hoc equivalence (margin was selected after
+  the initial whole-cord result); rebuilds Fig.5 (QC-passed / QC-failed
+  boxes non-overlapping; mutually exclusive exclusion categories) and Fig.8
+  (true 2D heatmap with p = 0.05 contour); makes the figure and analysis
+  scripts path-relative so they run from inside this repository without
+  hard-coded local drives; refactors the reanalysis to be public-data-only
+  by default with optional internal-data mode via `KINGSTON_INTERNAL_DIR`.
 
-## Licence
+## Reproducibility caveats
 
-Code under the MIT licence; de-identified data under CC BY 4.0.
-Raw DICOM data are not publicly available (institutional privacy restrictions).
+The 4 GE SCT processing failures are acknowledged as a stratum but the specific
+PA identifiers cannot be re-derived from the current pipeline logs (only an
+aggregate count is preserved). The missing-data sensitivity analysis reports
+both scenarios (UIH 8 + GE 79 QC-failed only; UIH 8 + GE 83 worst-case).
+
+The C6/C7 difference (the only per-level difference that survives Holm) relies
+on the SCT auto-labeling convention. A manual spot-check by a blinded
+radiologist is pending; not added to the public repository until completed.
+
+The whole-cord endpoint is **not** angle-corrected; the per-level C2–C7
+endpoint is angle-corrected by `sct_process_segmentation`. These describe
+slightly different physical quantities; absolute CSA values should not be
+directly compared between them. The single-centre design does not allow
+separation of the vendor effect from the protocol effect.
