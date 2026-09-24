@@ -1,9 +1,9 @@
 {
  "software": {
-  "statsmodels": "0.15.0",
-  "scipy": "1.18.1",
+  "statsmodels": "0.14.6",
+  "scipy": "1.18.0",
   "pandas": "2.3.3",
-  "numpy": "2.5.3",
+  "numpy": "2.4.6",
   "python_note": "MixedLM: ML (REML=False); multi-optimizer (lbfgs/bfgs/powell/cg)"
  },
  "cohort_flow": {
@@ -33,8 +33,8 @@
   },
   "dcm_review_exclusions": {
    "total": 67,
-   "UIH": 30,
-   "GE": 37,
+   "UIH": 31,
+   "GE": 36,
    "moderate_criteria_DCM": 55,
    "non_cervical_series": 2,
    "overlap_earlier_review": 10
@@ -150,10 +150,10 @@
    "GE_mean": 71.75958974358976,
    "GE_sd": 8.168516555202709,
    "level": "C2",
-   "ancova_vendor_p": 0.09724841093670203,
-   "ancova_age_p": 0.029730602140063764,
+   "ancova_vendor_p": 0.09724841093670729,
+   "ancova_age_p": 0.029730602140062946,
    "holm_welch": 0.6892858561597026,
-   "holm_ancova": 0.3889936437468081
+   "holm_ancova": 0.38899364374682915
   },
   {
    "n_a": 51,
@@ -172,10 +172,10 @@
    "GE_mean": 71.4053670886076,
    "GE_sd": 9.355626483671731,
    "level": "C3",
-   "ancova_vendor_p": 0.35509282489612304,
-   "ancova_age_p": 0.143662725016001,
+   "ancova_vendor_p": 0.35509282489613075,
+   "ancova_age_p": 0.143662725015996,
    "holm_welch": 0.9585146118101449,
-   "holm_ancova": 0.7101856497922461
+   "holm_ancova": 0.7101856497922615
   },
   {
    "n_a": 51,
@@ -194,10 +194,10 @@
    "GE_mean": 71.63657692307693,
    "GE_sd": 9.165085814519824,
    "level": "C4",
-   "ancova_vendor_p": 0.11916563815862337,
-   "ancova_age_p": 0.2376928023755717,
+   "ancova_vendor_p": 0.1191656381586274,
+   "ancova_age_p": 0.23769280237557386,
    "holm_welch": 0.6892858561597026,
-   "holm_ancova": 0.3889936437468081
+   "holm_ancova": 0.38899364374682915
   },
   {
    "n_a": 51,
@@ -216,10 +216,10 @@
    "GE_mean": 68.25051282051284,
    "GE_sd": 10.258343975039203,
    "level": "C5",
-   "ancova_vendor_p": 0.4037279714166873,
-   "ancova_age_p": 0.14662894888663724,
+   "ancova_vendor_p": 0.4037279714166995,
+   "ancova_age_p": 0.1466289488866368,
    "holm_welch": 0.9585146118101449,
-   "holm_ancova": 0.7101856497922461
+   "holm_ancova": 0.7101856497922615
   },
   {
    "n_a": 51,
@@ -238,10 +238,10 @@
    "GE_mean": 61.92836842105262,
    "GE_sd": 10.450984540341457,
    "level": "C6",
-   "ancova_vendor_p": 0.01970567368809527,
-   "ancova_age_p": 0.500801299258416,
+   "ancova_vendor_p": 0.019705673688095983,
+   "ancova_age_p": 0.5008012992584159,
    "holm_welch": 0.106530600522929,
-   "holm_ancova": 0.11230156008158049
+   "holm_ancova": 0.11230156008158583
   },
   {
    "n_a": 51,
@@ -260,28 +260,59 @@
    "GE_mean": 54.67290666666666,
    "GE_sd": 12.336724035318436,
    "level": "C7",
-   "ancova_vendor_p": 0.018716926680263413,
-   "ancova_age_p": 0.6777252939945935,
+   "ancova_vendor_p": 0.018716926680264305,
+   "ancova_age_p": 0.6777252939945911,
    "holm_welch": 0.047881980543585015,
-   "holm_ancova": 0.11230156008158049
+   "holm_ancova": 0.11230156008158583
   }
  ],
  "vendor_x_age_interaction": {
   "endpoint": "whole-cord CSA",
-  "interaction_p": 0.9704924700815699,
-  "interaction_coef": 0.003077148426092191,
+  "interaction_p": 0.9704924700815667,
+  "interaction_coef": 0.003077148426092524,
   "note": "tests effect modification; stratified estimates alone cannot establish it"
  },
+ "ancova_main_complete_case": {
+  "n": 127,
+  "vendor_coef": 1.9436919039970608,
+  "vendor_se": 1.3148525489049165,
+  "vendor_ci90_lo": -0.23532772064014407,
+  "vendor_ci90_hi": 4.122711528634266,
+  "vendor_p": 0.14187427286366577,
+  "age_p": 0.024285090460916765,
+  "tost_margin_mm2": 5.0,
+  "tost_p": 0.010863874320429154,
+  "note": "age-adjusted vendor coefficient; exploratory TOST against the post-hoc ±5 mm² margin"
+ },
+ "ancova_main_available_case": {
+  "n": 130,
+  "vendor_coef": 2.0497484489563664,
+  "vendor_se": 1.371622448157538,
+  "vendor_ci90_lo": -0.22294812150379206,
+  "vendor_ci90_hi": 4.322445019416525,
+  "vendor_p": 0.13755241884134928,
+  "age_p": 0.07783034213470547,
+  "tost_margin_mm2": 5.0,
+  "tost_p": 0.016688041157213805,
+  "note": "age-adjusted vendor coefficient; exploratory TOST against the post-hoc ±5 mm² margin"
+ },
  "ancova_main": {
-  "vendor_coef": 2.049748448956386,
-  "vendor_p": 0.1375524188413455,
-  "age_p": 0.07783034213470671
+  "n": 127,
+  "vendor_coef": 1.9436919039970608,
+  "vendor_se": 1.3148525489049165,
+  "vendor_ci90_lo": -0.23532772064014407,
+  "vendor_ci90_hi": 4.122711528634266,
+  "vendor_p": 0.14187427286366577,
+  "age_p": 0.024285090460916765,
+  "tost_margin_mm2": 5.0,
+  "tost_p": 0.010863874320429154,
+  "note": "age-adjusted vendor coefficient; exploratory TOST against the post-hoc ±5 mm² margin"
  },
  "ancova_wholecord": {
-  "vendor_coef": 2.8644103356564985,
-  "vendor_p": 0.01735534459406563,
-  "age_p": 0.005926555211084491,
-  "age_slope": -0.10665742130390138
+  "vendor_coef": 2.8644103356565145,
+  "vendor_p": 0.017355344594065035,
+  "age_p": 0.005926555211084311,
+  "age_slope": -0.10665742130390182
  },
  "mixed_model_v9": {
   "reduced": {
@@ -1694,9 +1725,9 @@
    "p": 0.06801470161565254
   },
   "joint_Wald": {
-   "chi2": 10.355996289769855,
+   "chi2": 10.355996289769863,
    "df": 5,
-   "p": 0.06575421664274203,
+   "p": 0.06575421664274185,
    "terms": [
     "C(vendor)[T.UIH]:C(level)[T.C3]",
     "C(vendor)[T.UIH]:C(level)[T.C4]",
@@ -3360,9 +3391,9 @@
     "p": 0.06806029737762485
    },
    "joint_Wald": {
-    "chi2": 10.354222434681922,
+    "chi2": 10.354222434681912,
     "df": 5,
-    "p": 0.06579856275607861,
+    "p": 0.06579856275607875,
     "terms": [
      "C(vendor)[T.UIH]:C(level)[T.C3]",
      "C(vendor)[T.UIH]:C(level)[T.C4]",
@@ -4650,9 +4681,10 @@
   "note": "Reported as a transparency placeholder. The per-level sensitivity to mis-labeling is bounded by the L2–C7 slice count statistics already exported in table1; no result in this manuscript is contingent on completion of the manual spot-check."
  },
  "angle_correction_check": {
-  "whole_cord_endpoint": "non-angle-corrected per-subject mean CSA (no cord-angle normalisation)",
-  "per_level_endpoint": "angle-corrected CSA at the C2–C7 mid-vertebral slice (sct_process_segmentation)",
-  "practical_difference_note": "The whole-cord and per-level CSA values therefore describe slightly different physical quantities. Direct absolute-CSA comparison between them is not appropriate; the whole-cord endpoint is used for the primary inference and per-level estimates for layer-wise sensitivity only.",
+  "primary_endpoint": "post-hoc mean of the four per-level values (C2-C5)",
+  "whole_cord_endpoint": "per-subject mean of non-angle-corrected per-slice CSA (axial 0.5 mm resampled voxel counting), averaged across all valid slices; secondary endpoint",
+  "per_level_endpoint": "angle-corrected CSA per vertebral level (sct_process_segmentation -vert 2:7; level value = mean across the slices belonging to that level)",
+  "practical_difference_note": "The whole-cord and per-level CSA values therefore describe slightly different physical quantities. Direct absolute-CSA comparison between them is not appropriate; the C2-C5 mean (per-level definition) is the post-hoc primary endpoint and whole-cord values serve as a secondary endpoint.",
   "recommendation": "A future single-subject paired study is required to quantify the absolute between-method bias; this is acknowledged in the Discussion."
  }
 }

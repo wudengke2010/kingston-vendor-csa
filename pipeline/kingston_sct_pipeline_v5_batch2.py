@@ -3,7 +3,7 @@ KINGSTON SCT Pipeline v5 — Batch 2: New 232 patients
 Processes eligible new patients (>=50yo + UIH/GE + T2w sagittal) from KINGSTON/KINGSTON/DICOM/
 
 Adapted from kingston_sct_pipeline_v5.py with:
-- New DICOM_ROOT: F:/bayymri/KINGSTON/KINGSTON/DICOM
+- New DICOM root provided via KINGSTON_DICOM_ROOT environment variable
 - Patient info read from DICOM headers (no metadata file)
 - Eligibility filter from new_data_analysis.json
 - Patient IDs prefixed with K2_ to avoid collision with original PA0-PA79
@@ -31,9 +31,11 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger('kingston_pipeline_v5_batch2')
 
 # === Configuration ===
-DICOM_ROOT = "F:/bayymri/KINGSTON/KINGSTON/DICOM"
-OUTPUT_ROOT = "E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5/batch2"
-ELIGIBILITY_FILE = "C:/Users/admin/WorkBuddy/2026-07-05-05-44-50/new_data_analysis.json"
+# Internal-processing script: all locations are provided via environment variables
+# (no absolute local paths are baked into the repository).
+DICOM_ROOT = os.environ.get('KINGSTON_DICOM_ROOT', '')
+OUTPUT_ROOT = os.environ.get('KINGSTON_OUTPUT_ROOT', '')
+ELIGIBILITY_FILE = os.environ.get('KINGSTON_ELIGIBILITY_FILE', '')
 CSA_STANDARD_RESOLUTION = 0.5  # mm
 
 

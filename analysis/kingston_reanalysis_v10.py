@@ -78,7 +78,7 @@ if HAVE_INTERNAL:
 else:
     # In public-only mode, the cohort-flow numerics are hard-coded from the
     # last fully-verified internal run (audit-package v9 Section 3).
-    _dcm_excl_n, _dcm_excl_uih, _dcm_excl_ge = 67, 30, 37
+    _dcm_excl_n, _dcm_excl_uih, _dcm_excl_ge = 67, 31, 36  # UIH 82->51 (31), GE 131->95 (36)
     _dcm_excl_age_mean, _dcm_excl_age_sd = 55.9, 10.7
     _dcm_excl_age_p = 0.0018
     _t3_n, _t3_age_mean, _t3_age_sd = 14, 46.5, 9.55
@@ -229,13 +229,33 @@ R['vendor_x_age_interaction'] = {
     'note': 'tests effect modification; stratified estimates alone cannot establish it',
 }
 X2 = X.drop(columns=['vendor_UIH_x_age'])
-fit_c25 = sm.OLS(pub['c2c5_mean_csa_mm2'].dropna().values,
-                X2.loc[pub['c2c5_mean_csa_mm2'].notna()]).fit()
-R['ancova_main'] = {
-    'vendor_coef': float(fit_c25.params['vendor_UIH']),
-    'vendor_p': float(fit_c25.pvalues['vendor_UIH']),
-    'age_p': float(fit_c25.pvalues['age']),
-}
+
+def _ancova_pack(fit, n):
+    """Age-adjusted vendor coefficient pack incl. 90% CI and exploratory TOST at ±5 mm²."""
+    b = float(fit.params['vendor_UIH']); se = float(fit.bse['vendor_UIH'])
+    ci = fit.conf_int(alpha=0.10).loc['vendor_UIH']
+    df_res = int(fit.df_resid)
+    t_lo = (b - (-5.0)) / se          # H01: beta <= -5
+    t_hi = (b - 5.0) / se             # H02: beta >= +5
+    tost_p = max(1.0 - stats.t.cdf(t_lo, df_res), stats.t.cdf(t_hi, df_res))
+    return {'n': n, 'vendor_coef': b, 'vendor_se': se,
+            'vendor_ci90_lo': float(ci[0]), 'vendor_ci90_hi': float(ci[1]),
+            'vendor_p': float(fit.pvalues['vendor_UIH']),
+            'age_p': float(fit.pvalues['age']),
+            'tost_margin_mm2': 5.0, 'tost_p': float(tost_p),
+            'note': 'age-adjusted vendor coefficient; exploratory TOST against the post-hoc ±5 mm² margin'}
+
+# complete-case: all four C2-C5 levels present (n = 127)
+_cc_mask = pub[['C2', 'C3', 'C4', 'C5']].notna().all(axis=1)
+fit_cc = sm.OLS(pub.loc[_cc_mask, 'c2c5_mean_csa_mm2'].values,
+                X2.loc[_cc_mask]).fit()
+# available-case: non-missing C2-C5 mean (n = 130)
+_ac_mask = pub['c2c5_mean_csa_mm2'].notna()
+fit_ac = sm.OLS(pub['c2c5_mean_csa_mm2'].dropna().values,
+                X2.loc[_ac_mask]).fit()
+R['ancova_main_complete_case'] = _ancova_pack(fit_cc, int(_cc_mask.sum()))
+R['ancova_main_available_case'] = _ancova_pack(fit_ac, int(_ac_mask.sum()))
+R['ancova_main'] = R['ancova_main_complete_case']  # primary definition: complete-case
 # whole-cord ANCOVA
 fit_wc = sm.OLS(pub['whole_cord_mean_csa_mm2'].values, X2).fit()
 R['ancova_wholecord'] = {
@@ -548,13 +568,17 @@ R['vertebral_labeling_qc'] = {
 # data so readers can quantify the difference; the absolute CSA values may shift by
 # a few percent.
 R['angle_correction_check'] = {
-    'whole_cord_endpoint': 'non-angle-corrected per-subject mean CSA (no cord-angle normalisation)',
-    'per_level_endpoint': 'angle-corrected CSA at the C2\u2013C7 mid-vertebral slice (sct_process_segmentation)',
+    'primary_endpoint': 'post-hoc mean of the four per-level values (C2-C5)',
+    'whole_cord_endpoint': 'per-subject mean of non-angle-corrected per-slice CSA '
+                          '(axial 0.5 mm resampled voxel counting), averaged across all '
+                          'valid slices; secondary endpoint',
+    'per_level_endpoint': 'angle-corrected CSA per vertebral level (sct_process_segmentation '
+                          '-vert 2:7; level value = mean across the slices belonging to that level)',
     'practical_difference_note': 'The whole-cord and per-level CSA values therefore describe '
                                  'slightly different physical quantities. Direct absolute-CSA '
-                                 'comparison between them is not appropriate; the whole-cord '
-                                 'endpoint is used for the primary inference and per-level '
-                                 'estimates for layer-wise sensitivity only.',
+                                 'comparison between them is not appropriate; the C2-C5 mean '
+                                 '(per-level definition) is the post-hoc primary endpoint and '
+                                 'whole-cord values serve as a secondary endpoint.',
     'recommendation': 'A future single-subject paired study is required to quantify the '
                       'absolute between-method bias; this is acknowledged in the Discussion.',
 }

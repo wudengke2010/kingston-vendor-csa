@@ -16,13 +16,13 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger('per_level_csa')
 
 # SCT binary path
-SCT_BIN = "C:/Users/admin/.workbuddy/binaries/python/versions/3.10.11/Scripts"
-SCT_PYTHON = "C:/Users/admin/.workbuddy/binaries/python/versions/3.10.11/python.exe"
+SCT_BIN = os.environ.get('SCT_BIN', '')   # directory containing sct_* executables
+SCT_PYTHON = os.environ.get('SCT_PYTHON', '')
 
 # Paths
-BATCH1_ROOT = "E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5"
-BATCH2_ROOT = "E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5/batch2"
-OUTPUT_ROOT = "E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5/per_level"
+BATCH1_ROOT = os.environ.get('KINGSTON_BATCH1_ROOT', '')
+BATCH2_ROOT = os.environ.get('KINGSTON_OUTPUT_ROOT', '')
+OUTPUT_ROOT = os.environ.get('KINGSTON_PERLEVEL_ROOT', '')
 
 
 def run_sct_label_vertebrae(nifti_path, seg_path, output_dir, patient_id):

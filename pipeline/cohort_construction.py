@@ -43,9 +43,7 @@ def _mean_c2c5(row: pd.Series) -> float:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--internal-dir', default=os.environ.get(
-        'KINGSTON_INTERNAL_DIR',
-        'E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5/batch2/'))
+    ap.add_argument('--internal-dir', default=os.environ.get('KINGSTON_INTERNAL_DIR', ''))
     ap.add_argument('--perlevel', default=None,
                     help='optional CSV with per-level C2..C7 CSA columns')
     ap.add_argument('--out', default=os.path.join(

@@ -28,9 +28,11 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger('kingston_pipeline_v5_batch3')
 
 # === Configuration ===
-DICOM_ROOT = "F:/bayymri/KINGSTON/KINGSTON/DICOM"
-OUTPUT_ROOT = "E:/boshi/spine-generic-multi-subject/results/kingston_sct_output_v5/batch2"
-CASES_FILE = "C:/Users/admin/WorkBuddy/2026-07-05-05-44-50/cases_to_process_no_age_limit.json"
+# Internal-processing script: all locations are provided via environment variables
+# (no absolute local paths are baked into the repository).
+DICOM_ROOT = os.environ.get('KINGSTON_DICOM_ROOT', '')
+OUTPUT_ROOT = os.environ.get('KINGSTON_OUTPUT_ROOT', '')
+CASES_FILE = os.environ.get('KINGSTON_CASES_FILE', '')
 CSA_STANDARD_RESOLUTION = 0.5  # mm
 
 

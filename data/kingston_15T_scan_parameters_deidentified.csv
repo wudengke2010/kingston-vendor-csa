@@ -1,132 +1,132 @@
-study_id,vendor,manufacturer,model,field_T,TR_ms,TE_ms,flip_deg,slice_thick_mm,spacing_mm,acq_matrix,fov_mm,acq_matrix_source,fov_mm_source
-S001,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S002,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.04,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S009,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S018,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,200.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S024,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S031,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S037,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S003,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.1,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S004,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.46,90.0,3.0,4.0,468x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S005,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,90.0,3.0,4.0,468x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S006,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S007,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S008,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S010,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S011,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S012,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S013,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.76,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S014,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2420.0,91.324,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S015,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2620.0,88.02,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S016,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.92,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S017,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.22,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S019,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S020,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.76,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S021,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,90.0,3.0,4.0,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S022,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S023,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S025,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S026,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S027,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S028,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S029,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S030,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S033,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,90.0,3.0,4.0,,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S034,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S035,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.82,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S036,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S038,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S039,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,456x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S040,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S041,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3140.0,86.22,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S042,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,528x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S043,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,456x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S044,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S045,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,90.0,3.0,4.0,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S046,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,90.0,3.5,4.5,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S065,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S047,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S061,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S062,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.46,90.0,3.5,4.5,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S063,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S064,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S066,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.7,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S067,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.1,90.0,3.0,4.0,456x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S068,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,90.0,3.0,4.0,512x512,300.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S069,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,210.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S070,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S071,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S072,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S073,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,320.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S074,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,90.0,3.0,4.0,384x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S048,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S049,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S050,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S051,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S052,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.22,90.0,3.5,4.5,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S053,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S054,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3000.0,115.992,90.0,4.0,5.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S055,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.64,90.0,3.0,4.0,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S056,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,90.0,3.0,4.0,408x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S057,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S058,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.16,90.0,3.0,4.0,544x544,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S059,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3180.0,86.02,90.0,4.0,5.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S060,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S075,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S116,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.64,90.0,3.5,4.5,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S090,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S114,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S115,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S117,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.74,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S118,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S119,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S120,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.64,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S121,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S122,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S123,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S124,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,90.0,3.5,4.5,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S125,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.34,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S126,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S127,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.86,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S128,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.1,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S129,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.98,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S130,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S131,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,90.0,4.0,5.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S132,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,90.0,3.0,4.0,444x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S076,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.34,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S077,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S078,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S079,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S080,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S081,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S082,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S083,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.86,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S084,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S085,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S086,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,90.0,3.0,4.0,432x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S087,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,90.0,3.0,4.5,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S088,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S089,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S091,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S092,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S093,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.16,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S094,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S095,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,90.0,3.5,4.5,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S096,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S097,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,90.0,3.0,4.0,512x512,230.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S098,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,87.96,90.0,4.0,5.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S099,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S100,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S101,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S102,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S103,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S104,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S105,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S106,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,90.0,3.0,4.0,512x512,220.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S107,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S108,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.92,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S109,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S110,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S111,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.86,90.0,3.0,4.0,576x576,,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S112,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,90.0,3.0,4.0,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
-S113,UIH,UIH,uMR  660,1.5,3000.0,120.12,150.0,3.0,3.29999995,512x512,240.0,Derived from DICOM header rows and cols (e.g. 512x512) when present,DICOM header (available for GE; UIH series did not report FOV in mm)
+study_id,vendor,manufacturer,model,field_T,TR_ms,TE_ms,ETL,flip_deg,slice_thick_mm,spacing_mm,inter_slice_gap_mm,acq_matrix,acq_matrix_source,fov_mm,fov_mm_source,bandwidth_Hzpx
+S001,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S002,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.04,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S003,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S004,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,468x576,DICOM header (rows/cols fields),195.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S005,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,468x576,DICOM header (rows/cols fields),195.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S006,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S007,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S008,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.1,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S009,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.46,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S010,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S011,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S012,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S013,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S014,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S015,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S016,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S017,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.76,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S018,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2420.0,91.324,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),200.0,DICOM header (FOV reported in mm),97.6562
+S019,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2620.0,88.02,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S020,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.92,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S021,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.22,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S022,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S023,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.76,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S024,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S025,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S026,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S027,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S028,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S029,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S030,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S031,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S032,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S034,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S035,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S036,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.82,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S037,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S038,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S039,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,456x576,DICOM header (rows/cols fields),190.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S040,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S041,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3140.0,86.22,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S042,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,528x576,DICOM header (rows/cols fields),220.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S043,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,456x576,DICOM header (rows/cols fields),190.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S044,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S045,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S046,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S047,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S048,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S049,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S050,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.46,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S051,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S052,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S053,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S054,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.1,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S055,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S056,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,408x576,DICOM header (rows/cols fields),170.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S057,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S058,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,544x544,DICOM header (rows/cols fields),220.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S059,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S060,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S061,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S062,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S063,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S064,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S065,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S066,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.22,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S067,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,456x576,DICOM header (rows/cols fields),190.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S068,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3000.0,115.992,25.0,90.0,4.0,5.0,1.0,512x512,DICOM header (rows/cols fields),300.0,DICOM header (FOV reported in mm),162.773
+S069,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.64,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),210.0,DICOM header (FOV reported in mm),97.6562
+S070,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S071,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S072,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.16,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S073,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,3180.0,86.02,25.0,90.0,4.0,5.0,1.0,512x512,DICOM header (rows/cols fields),320.0,DICOM header (FOV reported in mm),122.07
+S074,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,384x576,DICOM header (rows/cols fields),160.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S075,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S076,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.64,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S077,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S078,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S079,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S080,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.74,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S081,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S082,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S083,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.64,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S084,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S085,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S086,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,432x576,DICOM header (rows/cols fields),180.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S087,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.4,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S088,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S089,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S090,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.86,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S091,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.1,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S092,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,85.98,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S093,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S094,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.7,21.0,90.0,4.0,5.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S095,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S096,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2360.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S097,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.34,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),230.0,DICOM header (FOV reported in mm),97.6562
+S098,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.82,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S099,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S100,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S101,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S102,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S103,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.86,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S104,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S105,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S106,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.76,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S107,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,21.0,90.0,3.0,4.5,1.5,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S108,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S109,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S110,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S111,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S112,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,86.16,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S113,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S114,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,21.0,90.0,3.5,4.5,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S115,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S116,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S117,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,87.96,21.0,90.0,4.0,5.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S118,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S119,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S120,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2560.0,86.4,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S121,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S122,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S123,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S124,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.46,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S125,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.62,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S126,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2520.0,86.7,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S127,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2340.0,85.92,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S128,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,576x576,DICOM header (rows/cols fields),240.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
+S129,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S130,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2500.0,85.86,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),240.0,DICOM header (FOV reported in mm),97.6562
+S131,GE,GE MEDICAL SYSTEMS,SIGNA HDe,1.5,2580.0,86.52,21.0,90.0,3.0,4.0,1.0,512x512,DICOM header (rows/cols fields),220.0,DICOM header (FOV reported in mm),97.6562
+S132,UIH,UIH,uMR  660,1.5,3000.0,120.12,19.0,150.0,3.0,3.29999995,0.3,444x576,DICOM header (rows/cols fields),185.0,Derived: DICOM rows x pixel spacing (FOV not reported in header),200.0
