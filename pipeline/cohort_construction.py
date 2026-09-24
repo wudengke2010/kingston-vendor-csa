@@ -66,7 +66,7 @@ def main():
         'vendor': df['vendor'],
         'age': df['age'].astype(int),
         'sex': df['sex'],
-        'whole_cord_mean_csa_mm2': df['mean_csa'].round(2),
+        'whole_cord_mean_csa_mm2': df['mean_csa'].round(4),
     })
 
     # C2..C5: use mean_csa as a defensible default; replace with per-level when available
@@ -82,10 +82,10 @@ def main():
         for lv in ['C2', 'C3', 'C4', 'C5', 'C6', 'C7']:
             col = f'{lv}_mean_csa_mm2'
             if col in pl_idx.columns:
-                out[lv] = df['patient_id'].map(pl_idx[col]).round(2)
+                out[lv] = df['patient_id'].map(pl_idx[col]).round(4)
             elif lv in pl_idx.columns:
                 # per-level CSV uses direct level names (C2..C7)
-                out[lv] = df['patient_id'].map(pl_idx[lv]).round(2)
+                out[lv] = df['patient_id'].map(pl_idx[lv]).round(4)
             else:
                 out[lv] = np.nan
     else:
@@ -93,7 +93,7 @@ def main():
             out[lv] = np.nan
 
     # c2c5_mean_csa_mm2 is the primary endpoint mean (C2..C5)
-    out['c2c5_mean_csa_mm2'] = out[['C2', 'C3', 'C4', 'C5']].mean(axis=1).round(2)
+    out['c2c5_mean_csa_mm2'] = out[['C2', 'C3', 'C4', 'C5']].mean(axis=1).round(4)
 
     # Standardise column order
     cols = ['study_id', 'vendor', 'age', 'sex',

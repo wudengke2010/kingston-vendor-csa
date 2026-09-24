@@ -1,0 +1,4658 @@
+{
+ "software": {
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1",
+  "pandas": "2.3.3",
+  "numpy": "2.5.3",
+  "python_note": "MixedLM: ML (REML=False); multi-optimizer (lbfgs/bfgs/powell/cg)"
+ },
+ "cohort_flow": {
+  "pacs_exports": {
+   "export1": 80,
+   "export2": 232,
+   "total": 312
+  },
+  "preprocessing_exclusions": {
+   "total": 8,
+   "philips": 1,
+   "no_sagittal_T2": 3,
+   "under_18": 4
+  },
+  "entering_pipeline": 304,
+  "processing_failures": 4,
+  "processed": 300,
+  "qc_pass": {
+   "total": 213,
+   "UIH": 82,
+   "GE": 131
+  },
+  "qc_fail": {
+   "total": 87,
+   "UIH": 8,
+   "GE": 79
+  },
+  "dcm_review_exclusions": {
+   "total": 67,
+   "UIH": 30,
+   "GE": 37,
+   "moderate_criteria_DCM": 55,
+   "non_cervical_series": 2,
+   "overlap_earlier_review": 10
+  },
+  "dcm_review_age": {
+   "excluded_mean": 55.9,
+   "excluded_sd": 10.7,
+   "retained146_mean": 50.2,
+   "retained146_sd": 14.8,
+   "welch_p": 0.0018
+  },
+  "field_strength_exclusions_146_to_132": {
+   "total": 14,
+   "all_GE_3T": true,
+   "age_mean": 46.5,
+   "age_sd": 9.55
+  },
+  "final": {
+   "total": 132,
+   "UIH": 51,
+   "GE": 81
+  },
+  "note": "The \"4 GE processing failures\" stratum is acknowledged but the specific PA identifiers cannot be re-derived from the available pipeline logs (only an aggregate count is preserved). This stratum is treated separately in the missing-data sensitivity analysis (Methods S4)."
+ },
+ "table1": {
+  "age": {
+   "UIH_mean": 54.11764705882353,
+   "UIH_sd": 13.414390867756207,
+   "GE_mean": 48.370370370370374,
+   "GE_sd": 15.966718858648168,
+   "welch_p": 0.02799888860543334
+  },
+  "sex": {
+   "UIH_women": 26,
+   "UIH_n": 51,
+   "GE_women": 42,
+   "GE_n": 81,
+   "fisher_p": 1.0
+  },
+  "whole_cord": {
+   "UIH_mean": 67.47208235294117,
+   "UIH_sd": 6.63668478931178,
+   "GE_mean": 65.22066172839506,
+   "GE_sd": 6.745873218467864
+  }
+ },
+ "main_endpoint": {
+  "complete_case": {
+   "n_a": 51,
+   "n_b": 76,
+   "diff": 1.3771956914344514,
+   "se": 1.3211913648581872,
+   "df": 104.97613647387104,
+   "ci_lo": -0.8153197158259067,
+   "ci_hi": 3.5697110986948095,
+   "t": 1.0423892617420154,
+   "p": 0.299625895421011,
+   "cohens_d": 0.1899080736177587,
+   "mwu_p": 0.35902768911270155,
+   "tost_p": 0.00358957100968022,
+   "UIH_mean": 72.33175490196078,
+   "UIH_sd": 7.393007479647609,
+   "GE_mean": 70.95455921052633,
+   "GE_sd": 7.156294610204878
+  },
+  "available_case": {
+   "n_a": 51,
+   "n_b": 79,
+   "diff": 1.6274536361379859,
+   "se": 1.3501457221913735,
+   "df": 110.01198162362914,
+   "ci_lo": -0.6121986725611328,
+   "ci_hi": 3.8671059448371046,
+   "t": 1.2053910991892962,
+   "p": 0.23063870715580057,
+   "cohens_d": 0.21459746048785222,
+   "mwu_p": 0.3330692876330851,
+   "tost_p": 0.006986118437024278
+  },
+  "note": "v7 MWU p=0.28 and available-case CI -0.59..3.85 were incorrect"
+ },
+ "whole_cord": {
+  "n_a": 51,
+  "n_b": 81,
+  "diff": 2.251420624546114,
+  "se": 1.193922666990646,
+  "df": 107.72023228755661,
+  "ci_lo": 0.2705567523500123,
+  "ci_hi": 4.232284496742215,
+  "t": 1.8857340486054723,
+  "p": 0.062024645563202335,
+  "cohens_d": 0.33582801751112723,
+  "tost_p": 0.011624908405688791,
+  "ci95_lo": -0.11521085977139922,
+  "ci95_hi": 4.618052108863627,
+  "mwu_p": 0.032698597384539646
+ },
+ "table2_perlevel": [
+  {
+   "n_a": 51,
+   "n_b": 78,
+   "diff": 1.893645550527907,
+   "se": 1.4858842819381821,
+   "df": 105.77702389198436,
+   "ci_lo": -0.5720113251117485,
+   "ci_hi": 4.359302426167563,
+   "t": 1.2744233003513858,
+   "p": 0.2053060953906632,
+   "cohens_d": 0.23030004132467366,
+   "mwu_p": 0.18288289736640795,
+   "UIH_mean": 73.65323529411766,
+   "UIH_sd": 8.30498603150718,
+   "GE_mean": 71.75958974358976,
+   "GE_sd": 8.168516555202709,
+   "level": "C2",
+   "ancova_vendor_p": 0.09724841093670203,
+   "ancova_age_p": 0.029730602140063764,
+   "holm_welch": 0.6892858561597026,
+   "holm_ancova": 0.3889936437468081
+  },
+  {
+   "n_a": 51,
+   "n_b": 79,
+   "diff": 1.068985852568872,
+   "se": 1.5062398970587383,
+   "df": 120.58026440862182,
+   "ci_lo": -1.4277405876534055,
+   "ci_hi": 3.5657122927911495,
+   "t": 0.7097049113201024,
+   "p": 0.47925730590507243,
+   "cohens_d": 0.1222494492347029,
+   "mwu_p": 0.5322093948236666,
+   "UIH_mean": 72.47435294117648,
+   "UIH_sd": 7.694246920455646,
+   "GE_mean": 71.4053670886076,
+   "GE_sd": 9.355626483671731,
+   "level": "C3",
+   "ancova_vendor_p": 0.35509282489612304,
+   "ancova_age_p": 0.143662725016001,
+   "holm_welch": 0.9585146118101449,
+   "holm_ancova": 0.7101856497922461
+  },
+  {
+   "n_a": 51,
+   "n_b": 78,
+   "diff": 2.2393054298642454,
+   "se": 1.6299669255499074,
+   "df": 108.62285535997145,
+   "ci_lo": -0.46481432125337596,
+   "ci_hi": 4.943425180981867,
+   "t": 1.3738348887716012,
+   "p": 0.17232146403992565,
+   "cohens_d": 0.24631485355482835,
+   "mwu_p": 0.2947663054820341,
+   "UIH_mean": 73.87588235294118,
+   "UIH_sd": 8.976308267093014,
+   "GE_mean": 71.63657692307693,
+   "GE_sd": 9.165085814519824,
+   "level": "C4",
+   "ancova_vendor_p": 0.11916563815862337,
+   "ancova_age_p": 0.2376928023755717,
+   "holm_welch": 0.6892858561597026,
+   "holm_ancova": 0.3889936437468081
+  },
+  {
+   "n_a": 51,
+   "n_b": 78,
+   "diff": 1.073075414781286,
+   "se": 1.7606247573466622,
+   "df": 113.13131742865855,
+   "ci_lo": -1.8468050784435106,
+   "ci_hi": 3.9929559080060826,
+   "t": 0.6094855876038328,
+   "p": 0.5434247546498474,
+   "cohens_d": 0.10787324552325041,
+   "mwu_p": 0.7523663364086646,
+   "UIH_mean": 69.32358823529412,
+   "UIH_sd": 9.448977612792763,
+   "GE_mean": 68.25051282051284,
+   "GE_sd": 10.258343975039203,
+   "level": "C5",
+   "ancova_vendor_p": 0.4037279714166873,
+   "ancova_age_p": 0.14662894888663724,
+   "holm_welch": 0.9585146118101449,
+   "holm_ancova": 0.7101856497922461
+  },
+  {
+   "n_a": 51,
+   "n_b": 76,
+   "diff": 4.145513931888566,
+   "se": 1.7757847072664767,
+   "df": 115.02625328876086,
+   "ci_lo": 1.2008921808373425,
+   "ci_hi": 7.090135682939788,
+   "t": 2.3344687646679256,
+   "p": 0.0213061201045858,
+   "cohens_d": 0.41342497158757885,
+   "mwu_p": 0.047757621002244455,
+   "UIH_mean": 66.07388235294118,
+   "UIH_sd": 9.355722517576199,
+   "GE_mean": 61.92836842105262,
+   "GE_sd": 10.450984540341457,
+   "level": "C6",
+   "ancova_vendor_p": 0.01970567368809527,
+   "ancova_age_p": 0.500801299258416,
+   "holm_welch": 0.106530600522929,
+   "holm_ancova": 0.11230156008158049
+  },
+  {
+   "n_a": 51,
+   "n_b": 75,
+   "diff": 4.9565443137254945,
+   "se": 1.838102116051054,
+   "df": 123.9923824234116,
+   "ci_lo": 1.910375799581796,
+   "ci_hi": 8.002712827869193,
+   "t": 2.6965554690585125,
+   "p": 0.007980330090597502,
+   "cohens_d": 0.45517968620772037,
+   "mwu_p": 0.013884245309736419,
+   "UIH_mean": 59.62945098039216,
+   "UIH_sd": 8.295610411087843,
+   "GE_mean": 54.67290666666666,
+   "GE_sd": 12.336724035318436,
+   "level": "C7",
+   "ancova_vendor_p": 0.018716926680263413,
+   "ancova_age_p": 0.6777252939945935,
+   "holm_welch": 0.047881980543585015,
+   "holm_ancova": 0.11230156008158049
+  }
+ ],
+ "vendor_x_age_interaction": {
+  "endpoint": "whole-cord CSA",
+  "interaction_p": 0.9704924700815699,
+  "interaction_coef": 0.003077148426092191,
+  "note": "tests effect modification; stratified estimates alone cannot establish it"
+ },
+ "ancova_main": {
+  "vendor_coef": 2.049748448956386,
+  "vendor_p": 0.1375524188413455,
+  "age_p": 0.07783034213470671
+ },
+ "ancova_wholecord": {
+  "vendor_coef": 2.8644103356564985,
+  "vendor_p": 0.01735534459406563,
+  "age_p": 0.005926555211084491,
+  "age_slope": -0.10665742130390138
+ },
+ "mixed_model_v9": {
+  "reduced": {
+   "llf": -2684.9945747238976,
+   "aic": 5389.989149447795,
+   "bic": 5436.4530545962725,
+   "n_obs": 770,
+   "converged": true,
+   "k_fixed": 8,
+   "k_var": 1,
+   "coefficients": [
+    {
+     "term": "Intercept",
+     "coef": 73.99513802255518,
+     "se": 2.3147914137805907,
+     "z": 31.9662227801787,
+     "p": 3.2152786000171833e-224,
+     "ci95_lo": 69.45823021982267,
+     "ci95_hi": 78.5320458252877
+    },
+    {
+     "term": "C(vendor)[T.UIH]",
+     "coef": 2.942051174779344,
+     "se": 1.331742707958758,
+     "z": 2.2091738570799477,
+     "p": 0.027162550529473382,
+     "ci95_lo": 0.33188343050633495,
+     "ci95_hi": 5.552218919052353
+    },
+    {
+     "term": "C(level)[T.C3]",
+     "coef": -0.758982986602609,
+     "se": 0.8344189919880529,
+     "z": -0.9095945728587587,
+     "p": 0.363036361802641,
+     "ci95_lo": -2.3944141589154087,
+     "ci95_hi": 0.8764481857101907
+    },
+    {
+     "term": "C(level)[T.C4]",
+     "coef": -0.08580057770522094,
+     "se": 0.8364392682391986,
+     "z": -0.10257837115400031,
+     "p": 0.9182976095890006,
+     "ci95_lo": -1.7251914187090875,
+     "ci95_hi": 1.5535902632986458
+    },
+    {
+     "term": "C(level)[T.C5]",
+     "coef": -4.070503156922653,
+     "se": 0.8364815629068943,
+     "z": -4.866219815744732,
+     "p": 1.1375299570128548e-06,
+     "ci95_lo": -5.709976893951941,
+     "ci95_hi": -2.4310294198933646
+    },
+    {
+     "term": "C(level)[T.C6]",
+     "coef": -9.25142236392319,
+     "se": 0.8404803516039187,
+     "z": -11.007303557148445,
+     "p": 3.523929448212471e-28,
+     "ci95_lo": -10.898733582780432,
+     "ci95_hi": -7.604111145065948
+    },
+    {
+     "term": "C(level)[T.C7]",
+     "coef": -16.044434819996432,
+     "se": 0.8424018263851755,
+     "z": -19.04605892041402,
+     "p": 7.083887395034152e-81,
+     "ci95_lo": -17.69551206022214,
+     "ci95_hi": -14.393357579770726
+    },
+    {
+     "term": "age",
+     "coef": -0.05045057700614251,
+     "se": 0.04301542981886376,
+     "z": -1.172848376003398,
+     "p": 0.240856614633853,
+     "ci95_lo": -0.13475927023062578,
+     "ci95_hi": 0.03385811621834076
+    },
+    {
+     "term": "Group Var",
+     "coef": 1.014178885750337,
+     "se": 0.1630549295156974,
+     "z": 6.219860318008365,
+     "p": 4.975976635085848e-10,
+     "ci95_lo": 0.6945970963978532,
+     "ci95_hi": 1.333760675102821
+    }
+   ],
+   "random_effect_var": 45.69113554945433,
+   "residual_var": 45.052343517928676,
+   "fixed_effect_covariance": [
+    {
+     "row": "Intercept",
+     "col": "Intercept",
+     "value": 5.358259289312346
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.18909050302448757
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C3]",
+     "value": -0.3483628652767691
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C4]",
+     "value": -0.3532667571787834
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C5]",
+     "value": -0.34522436272656654
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C6]",
+     "value": -0.34818278880236897
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C7]",
+     "value": -0.34920755199363396
+    },
+    {
+     "row": "Intercept",
+     "col": "age",
+     "value": -0.09014548236589369
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "Intercept",
+     "value": -0.18909050302448965
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 1.773538640201326
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C3]",
+     "value": 0.0010207486594079654
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C4]",
+     "value": -0.0008679474730807325
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C5]",
+     "value": -6.434332239825105e-06
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C6]",
+     "value": -0.0026330359068217533
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C7]",
+     "value": -0.0036702049603019263
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "age",
+     "value": -0.009983573223840103
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "Intercept",
+     "value": -0.3483628652767704
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.0010207486594076068
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C3]",
+     "value": 0.6962550541903583
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C4]",
+     "value": 0.3497023020489215
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C5]",
+     "value": 0.34972013225996684
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C6]",
+     "value": 0.3497329155319433
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C7]",
+     "value": 0.3497277389005968
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "age",
+     "value": -3.413995196908311e-05
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "Intercept",
+     "value": -0.35326675717878425
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.0008679474730809906
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C3]",
+     "value": 0.34970230204892144
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C4]",
+     "value": 0.699630649452526
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C5]",
+     "value": 0.34971594756592167
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C6]",
+     "value": 0.3504145780787914
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C7]",
+     "value": 0.35041128360413837
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "age",
+     "value": 7.678785176362473e-05
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "Intercept",
+     "value": -0.3452243627265674
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -6.434332240054373e-06
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C3]",
+     "value": 0.3497201322599669
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C4]",
+     "value": 0.3497159475659218
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C5]",
+     "value": 0.6997014050831606
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C6]",
+     "value": 0.3504824247324213
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C7]",
+     "value": 0.35045460394323574
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "age",
+     "value": -8.835605633000208e-05
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "Intercept",
+     "value": -0.3481827888023696
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.0026330359068219983
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C3]",
+     "value": 0.34973291553194324
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C4]",
+     "value": 0.3504145780787914
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C5]",
+     "value": 0.3504824247324213
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C6]",
+     "value": 0.7064072214322467
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C7]",
+     "value": 0.35115995795124694
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "age",
+     "value": -1.0169663227439098e-05
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "Intercept",
+     "value": -0.3492075519936351
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.0036702049603022854
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C3]",
+     "value": 0.34972773890059666
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C4]",
+     "value": 0.35041128360413837
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C5]",
+     "value": 0.3504546039432357
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C6]",
+     "value": 0.35115995795124694
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C7]",
+     "value": 0.7096408370970793
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "age",
+     "value": 1.80844282363406e-05
+    },
+    {
+     "row": "age",
+     "col": "Intercept",
+     "value": -0.09014548236589368
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.009983573223840138
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C3]",
+     "value": -3.413995196911014e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C4]",
+     "value": 7.678785176360562e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C5]",
+     "value": -8.835605633001877e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C6]",
+     "value": -1.0169663227453334e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C7]",
+     "value": 1.8084428236315734e-05
+    },
+    {
+     "row": "age",
+     "col": "age",
+     "value": 0.0018503272025015938
+    }
+   ],
+   "optimizer": "cg"
+  },
+  "full": {
+   "llf": -2679.8610904247703,
+   "aic": 5389.722180849541,
+   "bic": 5459.418038572257,
+   "n_obs": 770,
+   "converged": true,
+   "k_fixed": 13,
+   "k_var": 1,
+   "coefficients": [
+    {
+     "term": "Intercept",
+     "coef": 74.36654712458248,
+     "se": 2.357222081423226,
+     "z": 31.54838388400044,
+     "p": 1.8869683617076043e-218,
+     "ci95_lo": 69.74647674143041,
+     "ci95_hi": 78.98661750773455
+    },
+    {
+     "term": "C(vendor)[T.UIH]",
+     "coef": 2.0256498516110826,
+     "se": 1.725089645673567,
+     "z": 1.1742287461357759,
+     "p": 0.2403034148250337,
+     "ci95_lo": -1.3554637240120715,
+     "ci95_hi": 5.406763427234237
+    },
+    {
+     "term": "C(level)[T.C3]",
+     "coef": -0.4940418350880903,
+     "se": 1.063067691352468,
+     "z": -0.46473224528115875,
+     "p": 0.642123213743202,
+     "ci95_lo": -2.5776162232670696,
+     "ci95_hi": 1.5895325530908888
+    },
+    {
+     "term": "C(level)[T.C4]",
+     "coef": -0.2939893776349435,
+     "se": 1.0673246626774342,
+     "z": -0.27544512734996424,
+     "p": 0.782974277773852,
+     "ci95_lo": -2.3859072762940765,
+     "ci95_hi": 1.7979285210241893
+    },
+    {
+     "term": "C(level)[T.C5]",
+     "coef": -3.907813277303956,
+     "se": 1.0674143292691578,
+     "z": -3.661008823049598,
+     "p": 0.0002512241062789707,
+     "ci95_lo": -5.999906919253483,
+     "ci95_hi": -1.8157196353544278
+    },
+    {
+     "term": "C(level)[T.C6]",
+     "coef": -10.377815714900716,
+     "se": 1.0759389408981834,
+     "z": -9.645357483053282,
+     "p": 5.143167912851423e-22,
+     "ci95_lo": -12.486617288625325,
+     "ci95_hi": -8.269014141176108
+    },
+    {
+     "term": "C(level)[T.C7]",
+     "coef": -17.419769607825636,
+     "se": 1.0800861420754733,
+     "z": -16.12812990485382,
+     "p": 1.6184741414984348e-58,
+     "ci95_lo": -19.536699546494376,
+     "ci95_hi": -15.302839669156896
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "coef": -0.6848405178532541,
+     "se": 1.693412825920345,
+     "z": -0.4044143916773828,
+     "p": 0.6859080189221657,
+     "ci95_lo": -4.003868667615326,
+     "ci95_hi": 2.634187631908818
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "coef": 0.5166364364583119,
+     "se": 1.6960884464418595,
+     "z": 0.3046046552242827,
+     "p": 0.7606672740630689,
+     "ci95_lo": -2.8076358331622253,
+     "ci95_hi": 3.840908706078849
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "coef": -0.42183378151973777,
+     "se": 1.6961448738015246,
+     "z": -0.2487015042378384,
+     "p": 0.8035916851810285,
+     "ci95_lo": -3.746216646732961,
+     "ci95_hi": 2.9025490836934855
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "coef": 2.798462773724081,
+     "se": 1.7015224615429463,
+     "z": 1.64468165244579,
+     "p": 0.1000354784190737,
+     "ci95_lo": -0.536459969786033,
+     "ci95_hi": 6.133385517234196
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "coef": 3.395985294099976,
+     "se": 1.7041479269410686,
+     "z": 1.9927761202020422,
+     "p": 0.046285967755138276,
+     "ci95_lo": 0.05591673296688615,
+     "ci95_hi": 6.736053855233066
+    },
+    {
+     "term": "age",
+     "coef": -0.05061124847313711,
+     "se": 0.04308230843620969,
+     "z": -1.1747571174853648,
+     "p": 0.2400919008275092,
+     "ci95_lo": -0.13505102137895425,
+     "ci95_hi": 0.03382852443268003
+    },
+    {
+     "term": "Group Var",
+     "coef": 1.037879599084985,
+     "se": 0.16636358797048006,
+     "z": 6.2386223556872835,
+     "p": 4.4144126518410774e-10,
+     "ci95_lo": 0.7118129583239831,
+     "ci95_hi": 1.363946239845987
+    }
+   ],
+   "random_effect_var": 45.98545501450003,
+   "residual_var": 44.307119106148456,
+   "fixed_effect_covariance": [
+    {
+     "row": "Intercept",
+     "col": "Intercept",
+     "value": 5.5564959411492465
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.6630169851788014
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C3]",
+     "value": -0.5665674130279295
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C4]",
+     "value": -0.5754036221205708
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C5]",
+     "value": -0.5623143554075688
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C6]",
+     "value": -0.5685961580609079
+    },
+    {
+     "row": "Intercept",
+     "col": "C(level)[T.C7]",
+     "value": -0.5708671723291763
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 0.5665674130279212
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 0.5754036221205633
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 0.562314355407561
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 0.5685961580608999
+    },
+    {
+     "row": "Intercept",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 0.570867172329168
+    },
+    {
+     "row": "Intercept",
+     "col": "age",
+     "value": -0.09042298070814933
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "Intercept",
+     "value": -0.6630169851787857
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 2.9759342856101525
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C3]",
+     "value": 0.56956033476318
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C4]",
+     "value": 0.5686126150595076
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C5]",
+     "value": 0.5701076390447231
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C6]",
+     "value": 0.5694793702338872
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(level)[T.C7]",
+     "value": 0.5692242279283918
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -1.4383273760602158
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -1.4373796563565422
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -1.4388746803417582
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -1.4382464115309221
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -1.4379912692254275
+    },
+    {
+     "row": "C(vendor)[T.UIH]",
+     "col": "age",
+     "value": -0.010023988478750275
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "Intercept",
+     "value": -0.5665674130279242
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.5695603347631805
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C3]",
+     "value": 1.1301129163974661
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C4]",
+     "value": 0.5692865767261469
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C5]",
+     "value": 0.5693342081851346
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C6]",
+     "value": 0.56939171738023
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(level)[T.C7]",
+     "value": 0.5693872790836307
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -1.1301129163974668
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -0.5692865767261469
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -0.5693342081851346
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -0.5693917173802301
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -0.5693872790836312
+    },
+    {
+     "row": "C(level)[T.C3]",
+     "col": "age",
+     "value": -5.530398858625721e-05
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "Intercept",
+     "value": -0.5754036221205654
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.5686126150595079
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C3]",
+     "value": 0.5692865767261468
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C4]",
+     "value": 1.1391819355594985
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C5]",
+     "value": 0.5693240157901535
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C6]",
+     "value": 0.5712330346447304
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(level)[T.C7]",
+     "value": 0.5712308954450427
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -0.5692865767261469
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -1.139181935559499
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -0.5693240157901537
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -0.5712330346447302
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -0.5712308954450432
+    },
+    {
+     "row": "C(level)[T.C4]",
+     "col": "age",
+     "value": 0.0001254860000412842
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "Intercept",
+     "value": -0.562314355407563
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.5701076390447234
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C3]",
+     "value": 0.5693342081851344
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C4]",
+     "value": 0.5693240157901535
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C5]",
+     "value": 1.1393733503291261
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C6]",
+     "value": 0.5714178999857392
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(level)[T.C7]",
+     "value": 0.5713512069373555
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -0.5693342081851346
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -0.5693240157901537
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -1.1393733503291263
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -0.5714178999857393
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -0.5713512069373559
+    },
+    {
+     "row": "C(level)[T.C5]",
+     "col": "age",
+     "value": -0.00014400632807796274
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "Intercept",
+     "value": -0.5685961580609029
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.5694793702338876
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C3]",
+     "value": 0.5693917173802301
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C4]",
+     "value": 0.5712330346447303
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C5]",
+     "value": 0.5714178999857396
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C6]",
+     "value": 1.1576446045411048
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(level)[T.C7]",
+     "value": 0.5732622754218997
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -0.5693917173802303
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -0.5712330346447307
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -0.5714178999857398
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -1.157644604541105
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -0.5732622754219001
+    },
+    {
+     "row": "C(level)[T.C6]",
+     "col": "age",
+     "value": -1.6320224935590956e-05
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "Intercept",
+     "value": -0.5708671723291711
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]",
+     "value": 0.5692242279283922
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C3]",
+     "value": 0.5693872790836307
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C4]",
+     "value": 0.5712308954450428
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C5]",
+     "value": 0.5713512069373557
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C6]",
+     "value": 0.5732622754218996
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(level)[T.C7]",
+     "value": 1.1665860743034793
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": -0.5693872790836308
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -0.571230895445043
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": -0.5713512069373557
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": -0.5732622754218996
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -1.1665860743034797
+    },
+    {
+     "row": "C(level)[T.C7]",
+     "col": "age",
+     "value": 3.0358755231775894e-05
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "Intercept",
+     "value": 0.5665674130279147
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -1.4383273760602155
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(level)[T.C3]",
+     "value": -1.1301129163974666
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(level)[T.C4]",
+     "value": -0.5692865767261469
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(level)[T.C5]",
+     "value": -0.5693342081851347
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(level)[T.C6]",
+     "value": -0.5693917173802302
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(level)[T.C7]",
+     "value": -0.5693872790836307
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 2.8676469989915288
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 1.4380536180231795
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 1.4381012494821677
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 1.438158758677263
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 1.438154320380664
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "col": "age",
+     "value": 5.530398858645526e-05
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "Intercept",
+     "value": 0.5754036221205562
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -1.4373796563565426
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(level)[T.C3]",
+     "value": -0.569286576726147
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(level)[T.C4]",
+     "value": -1.139181935559499
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(level)[T.C5]",
+     "value": -0.5693240157901538
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(level)[T.C6]",
+     "value": -0.5712330346447304
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(level)[T.C7]",
+     "value": -0.5712308954450428
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 1.43805361802318
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 2.876716018153561
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 1.4380910570871868
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 1.4400000759417635
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 1.439997936742076
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "col": "age",
+     "value": -0.00012548600004109032
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "Intercept",
+     "value": 0.5623143554075537
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -1.4388746803417582
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(level)[T.C3]",
+     "value": -0.5693342081851346
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(level)[T.C4]",
+     "value": -0.5693240157901536
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(level)[T.C5]",
+     "value": -1.1393733503291266
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(level)[T.C6]",
+     "value": -0.5714178999857393
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(level)[T.C7]",
+     "value": -0.5713512069373556
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 1.4381012494821677
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 1.4380910570871865
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 2.8769074329231894
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 1.4401849412827723
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 1.4401182482343893
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "col": "age",
+     "value": 0.00014400632807815814
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "Intercept",
+     "value": 0.5685961580608936
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -1.4382464115309226
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(level)[T.C3]",
+     "value": -0.5693917173802304
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(level)[T.C4]",
+     "value": -0.5712330346447305
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(level)[T.C5]",
+     "value": -0.5714178999857397
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(level)[T.C6]",
+     "value": -1.157644604541105
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(level)[T.C7]",
+     "value": -0.5732622754218997
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 1.4381587586772633
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 1.4400000759417635
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 1.440184941282773
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 2.895178687135167
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 1.4420293167189333
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "col": "age",
+     "value": 1.6320224935785868e-05
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "Intercept",
+     "value": 0.5708671723291615
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]",
+     "value": -1.437991269225427
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(level)[T.C3]",
+     "value": -0.569387279083631
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(level)[T.C4]",
+     "value": -0.571230895445043
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(level)[T.C5]",
+     "value": -0.5713512069373559
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(level)[T.C6]",
+     "value": -0.5732622754218997
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(level)[T.C7]",
+     "value": -1.1665860743034793
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 1.4381543203806637
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": 1.4399979367420757
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 1.4401182482343886
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 1.4420293167189324
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": 2.904120156897542
+    },
+    {
+     "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "col": "age",
+     "value": -3.035875523157937e-05
+    },
+    {
+     "row": "age",
+     "col": "Intercept",
+     "value": -0.09042298070814958
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]",
+     "value": -0.010023988478749982
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C3]",
+     "value": -5.530398858614773e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C4]",
+     "value": 0.00012548600004139016
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C5]",
+     "value": -0.00014400632807784852
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C6]",
+     "value": -1.632022493549003e-05
+    },
+    {
+     "row": "age",
+     "col": "C(level)[T.C7]",
+     "value": 3.0358755231883074e-05
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "value": 5.53039885863233e-05
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "value": -0.00012548600004123086
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "value": 0.00014400632807800898
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "value": 1.6320224935650495e-05
+    },
+    {
+     "row": "age",
+     "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "value": -3.035875523170626e-05
+    },
+    {
+     "row": "age",
+     "col": "age",
+     "value": 0.0018560853001927048
+    }
+   ],
+   "optimizer": "bfgs"
+  },
+  "LR": {
+   "chi2": 10.266968598254607,
+   "df": 5,
+   "p": 0.06801470161565254
+  },
+  "joint_Wald": {
+   "chi2": 10.355996289769855,
+   "df": 5,
+   "p": 0.06575421664274203,
+   "terms": [
+    "C(vendor)[T.UIH]:C(level)[T.C3]",
+    "C(vendor)[T.UIH]:C(level)[T.C4]",
+    "C(vendor)[T.UIH]:C(level)[T.C5]",
+    "C(vendor)[T.UIH]:C(level)[T.C6]",
+    "C(vendor)[T.UIH]:C(level)[T.C7]"
+   ]
+  },
+  "vendor_effect_reduced": {
+   "beta": 2.942051174779344,
+   "p": 0.027162550529473382,
+   "ci95": [
+    0.33188343050633495,
+    5.552218919052353
+   ]
+  },
+  "sex_adjusted": {
+   "reduced": {
+    "llf": -2684.9295537729954,
+    "aic": 5391.859107545991,
+    "bic": 5442.969403209316,
+    "n_obs": 770,
+    "converged": true,
+    "k_fixed": 9,
+    "k_var": 1,
+    "coefficients": [
+     {
+      "term": "Intercept",
+      "coef": 74.20856031970347,
+      "se": 2.3883703307033413,
+      "z": 31.070793069954984,
+      "p": 5.976624467648653e-212,
+      "ci95_lo": 69.5274404897809,
+      "ci95_hi": 78.88968014962603
+     },
+     {
+      "term": "C(vendor)[T.UIH]",
+      "coef": 2.9451270253714683,
+      "se": 1.331268909240755,
+      "z": 2.212270567522773,
+      "p": 0.026947975486003615,
+      "ci95_lo": 0.3358879095216665,
+      "ci95_hi": 5.55436614122127
+     },
+     {
+      "term": "C(level)[T.C3]",
+      "coef": -0.7592581533502332,
+      "se": 0.8343982899400468,
+      "z": -0.9099469192401957,
+      "p": 0.36285050398293817,
+      "ci95_lo": -2.3946487503945346,
+      "ci95_hi": 0.8761324436940683
+     },
+     {
+      "term": "C(level)[T.C4]",
+      "coef": -0.08563667204869548,
+      "se": 0.8364182888628442,
+      "z": -0.10238498271615169,
+      "p": 0.9184511030852434,
+      "ci95_lo": -1.7249863942304895,
+      "ci95_hi": 1.5537130501330987
+     },
+     {
+      "term": "C(level)[T.C5]",
+      "coef": -4.0712128745717635,
+      "se": 0.8364622344969155,
+      "z": -4.867180736522273,
+      "p": 1.132014960732234e-06,
+      "ci95_lo": -5.710648728613615,
+      "ci95_hi": -2.4317770205299123
+     },
+     {
+      "term": "C(level)[T.C6]",
+      "coef": -9.251999270533128,
+      "se": 0.8404599463567437,
+      "z": -11.008257217537885,
+      "p": 3.486832540346807e-28,
+      "ci95_lo": -10.899270495840812,
+      "ci95_hi": -7.604728045225444
+     },
+     {
+      "term": "C(level)[T.C7]",
+      "coef": -16.04413298853482,
+      "se": 0.8423810051290697,
+      "z": -19.046171377138943,
+      "p": 7.068689401092975e-81,
+      "ci95_lo": -17.695169419848447,
+      "ci95_hi": -14.393096557221192
+     },
+     {
+      "term": "C(sex_M)[T.1]",
+      "coef": -0.4621738792473706,
+      "se": 1.2814779024013654,
+      "z": -0.36065692461906795,
+      "p": 0.7183559295207635,
+      "ci95_lo": -2.973824414937981,
+      "ci95_hi": 2.04947665644324
+     },
+     {
+      "term": "age",
+      "coef": -0.050261353127709615,
+      "se": 0.04300249890777793,
+      "z": -1.168800753544552,
+      "p": 0.2424839167194236,
+      "ci95_lo": -0.13454470223217735,
+      "ci95_hi": 0.03402199597675813
+     },
+     {
+      "term": "Group Var",
+      "coef": 1.0133469507435258,
+      "se": 0.16289869635925228,
+      "z": 6.220718602368176,
+      "p": 4.948830343770892e-10,
+      "ci95_lo": 0.6940713727508653,
+      "ci95_hi": 1.3326225287361861
+     }
+    ],
+    "random_effect_var": 45.65136203290046,
+    "residual_var": 45.05008082316186,
+    "fixed_effect_covariance": [
+     {
+      "row": "Intercept",
+      "col": "Intercept",
+      "value": 5.704312836583988
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.18386005119129162
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C3]",
+      "value": -0.3488267360048796
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C4]",
+      "value": -0.3530109686067599
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C5]",
+      "value": -0.34648094694614606
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C6]",
+      "value": -0.34924667615575566
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C7]",
+      "value": -0.3487848767492894
+     },
+     {
+      "row": "Intercept",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.7580083102832886
+     },
+     {
+      "row": "Intercept",
+      "col": "age",
+      "value": -0.08976409694203315
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "Intercept",
+      "value": -0.183860051191291
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 1.7722769087110695
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C3]",
+      "value": 0.0010137029543365102
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C4]",
+      "value": -0.0008644861743307259
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C5]",
+      "value": -2.49725432643536e-05
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C6]",
+      "value": -0.0026486183451782065
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C7]",
+      "value": -0.003664362375368999
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.011018443690029099
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "age",
+      "value": -0.009971552733472793
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "Intercept",
+      "value": -0.34882673600487907
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.001013702954336785
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C3]",
+      "value": 0.6962205062548744
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C4]",
+      "value": 0.3496842910574455
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C5]",
+      "value": 0.34970370367193315
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C6]",
+      "value": 0.34971616812263845
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C7]",
+      "value": 0.34970936688125864
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.0010406209555247293
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "age",
+      "value": -3.4543530510769e-05
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "Intercept",
+      "value": -0.3530109686067595
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.0008644861743305073
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C3]",
+      "value": 0.34968429105744553
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C4]",
+      "value": 0.6995955539442483
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C5]",
+      "value": 0.3496973587048187
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C6]",
+      "value": 0.35039600912619634
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C7]",
+      "value": 0.3503939699149265
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0005157521354167206
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "age",
+      "value": 7.7000341980479e-05
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "Intercept",
+      "value": -0.346480946946146
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -2.4972543264150443e-05
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C3]",
+      "value": 0.3497037036719331
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C4]",
+      "value": 0.34969735870481866
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C5]",
+      "value": 0.6996690697395728
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C6]",
+      "value": 0.35046683642438453
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C7]",
+      "value": 0.35043498452545446
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.0027520796783094314
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "age",
+      "value": -8.94064127029666e-05
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "Intercept",
+      "value": -0.3492466761557556
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.0026486183451780144
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C3]",
+      "value": 0.3497161681226385
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C4]",
+      "value": 0.3503960091261963
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C5]",
+      "value": 0.3504668364243846
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C6]",
+      "value": 0.7063729214299805
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C7]",
+      "value": 0.3511405548122176
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.002334891735312848
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "age",
+      "value": -1.1050158737766171e-05
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "Intercept",
+      "value": -0.348784876749289
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.0036643623753687842
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C3]",
+      "value": 0.34970936688125875
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C4]",
+      "value": 0.35039396991492655
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C5]",
+      "value": 0.3504349845254545
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C6]",
+      "value": 0.3511405548122176
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C7]",
+      "value": 0.7096057578022618
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0008804470439628841
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "age",
+      "value": 1.847934166653009e-05
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "Intercept",
+      "value": -0.7580083102832845
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.011018443690028858
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C3]",
+      "value": 0.0010406209555244331
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C4]",
+      "value": -0.000515752135416962
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C5]",
+      "value": 0.002752079678309178
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C6]",
+      "value": 0.002334891735312588
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C7]",
+      "value": -0.000880447043963122
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(sex_M)[T.1]",
+      "value": 1.6421856143430031
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "age",
+      "value": -0.0006791640391482208
+     },
+     {
+      "row": "age",
+      "col": "Intercept",
+      "value": -0.0897640969420332
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.009971552733472788
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C3]",
+      "value": -3.4543530510753834e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C4]",
+      "value": 7.700034198049274e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C5]",
+      "value": -8.940641270296176e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C6]",
+      "value": -1.105015873775987e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C7]",
+      "value": 1.8479341666542345e-05
+     },
+     {
+      "row": "age",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0006791640391481399
+     },
+     {
+      "row": "age",
+      "col": "age",
+      "value": 0.001849214912313442
+     }
+    ]
+   },
+   "full": {
+    "llf": -2679.796953063102,
+    "aic": 5391.593906126204,
+    "bic": 5465.936154363768,
+    "n_obs": 770,
+    "converged": true,
+    "k_fixed": 14,
+    "k_var": 1,
+    "coefficients": [
+     {
+      "term": "Intercept",
+      "coef": 74.57899388535459,
+      "se": 2.42986605920738,
+      "z": 30.692635753627584,
+      "p": 7.137029623288057e-207,
+      "ci95_lo": 69.81654392205186,
+      "ci95_hi": 79.34144384865732
+     },
+     {
+      "term": "C(vendor)[T.UIH]",
+      "coef": 2.028421294125307,
+      "se": 1.7247046555135583,
+      "z": 1.17609776702395,
+      "p": 0.239555810136865,
+      "ci95_lo": -1.3519377146498281,
+      "ci95_hi": 5.408780302900443
+     },
+     {
+      "term": "C(level)[T.C3]",
+      "coef": -0.4944852416215927,
+      "se": 1.0630421676171617,
+      "z": -0.46516051449774093,
+      "p": 0.6418165128198182,
+      "ci95_lo": -2.578009604198621,
+      "ci95_hi": 1.589039120955436
+     },
+     {
+      "term": "C(level)[T.C4]",
+      "coef": -0.29372188009870137,
+      "se": 1.0672985772634254,
+      "z": -0.27520122893053045,
+      "p": 0.7831616428595871,
+      "ci95_lo": -2.385588652285855,
+      "ci95_hi": 1.7981448920884524
+     },
+     {
+      "term": "C(level)[T.C5]",
+      "coef": -3.9089602113856468,
+      "se": 1.06739164958082,
+      "z": -3.6621611316902762,
+      "p": 0.00025009646308778123,
+      "ci95_lo": -6.001009401962852,
+      "ci95_hi": -1.8169110208084418
+     },
+     {
+      "term": "C(level)[T.C6]",
+      "coef": -10.378752217449664,
+      "se": 1.0759140203547015,
+      "z": -9.646451315903526,
+      "p": 5.088622296735703e-22,
+      "ci95_lo": -12.487504947806574,
+      "ci95_hi": -8.269999487092754
+     },
+     {
+      "term": "C(level)[T.C7]",
+      "coef": -17.41926670420747,
+      "se": 1.0800604460298875,
+      "z": -16.12804798864511,
+      "p": 1.620621973962115e-58,
+      "ci95_lo": -19.536146279552316,
+      "ci95_hi": -15.302387128862623
+     },
+     {
+      "term": "C(sex_M)[T.1]",
+      "coef": -0.4597491010443959,
+      "se": 1.2835047806601756,
+      "z": -0.35819819915896395,
+      "p": 0.7201949948179993,
+      "ci95_lo": -2.9753722451233218,
+      "ci95_hi": 2.05587404303453
+     },
+     {
+      "term": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "coef": -0.6843971113196963,
+      "se": 1.693371666155732,
+      "z": -0.4041623732097778,
+      "p": 0.6860933208368312,
+      "ci95_lo": -4.003344589425515,
+      "ci95_hi": 2.6345503667861228
+     },
+     {
+      "term": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "coef": 0.5163689389221211,
+      "se": 1.6960469340897906,
+      "z": 0.3044543924718913,
+      "p": 0.7607817340125202,
+      "ci95_lo": -2.807821967983447,
+      "ci95_hi": 3.8405598458276895
+     },
+     {
+      "term": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "coef": -0.42068684743799634,
+      "se": 1.6961055047377538,
+      "z": -0.24803106072286554,
+      "p": 0.8041103745474338,
+      "ci95_lo": -3.744992550704124,
+      "ci95_hi": 2.903618855828131
+     },
+     {
+      "term": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "coef": 2.7993992762730846,
+      "se": 1.7014816862965827,
+      "z": 1.6452714706358147,
+      "p": 0.09991384046234388,
+      "ci95_lo": -0.5354435492226961,
+      "ci95_hi": 6.134242101768866
+     },
+     {
+      "term": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "coef": 3.3954823904818716,
+      "se": 1.7041066623557124,
+      "z": 1.9925292620991493,
+      "p": 0.046313017835346144,
+      "ci95_lo": 0.055494706449917164,
+      "ci95_hi": 6.735470074513826
+     },
+     {
+      "term": "age",
+      "coef": -0.050423712546143896,
+      "se": 0.04306949510280963,
+      "z": -1.1707523486351368,
+      "p": 0.2416983366173281,
+      "ci95_lo": -0.134838371779975,
+      "ci95_hi": 0.033990946687687214
+     },
+     {
+      "term": "Group Var",
+      "coef": 1.0370386412102544,
+      "se": 0.1662062344952634,
+      "z": 6.239468960713434,
+      "p": 4.39058863141504e-10,
+      "ci95_lo": 0.7112804075935193,
+      "ci95_hi": 1.3627968748269894
+     }
+    ],
+    "random_effect_var": 45.945943295747824,
+    "residual_var": 44.30494821497449,
+    "fixed_effect_covariance": [
+     {
+      "row": "Intercept",
+      "col": "Intercept",
+      "value": 5.904249065688002
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.6583287313368148
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C3]",
+      "value": -0.5673226152341528
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C4]",
+      "value": -0.5749852111475432
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C5]",
+      "value": -0.5643650320897088
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C6]",
+      "value": -0.5703432844541417
+     },
+     {
+      "row": "Intercept",
+      "col": "C(level)[T.C7]",
+      "value": -0.5701594396868281
+     },
+     {
+      "row": "Intercept",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.7610273298993011
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 0.5673226152341456
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 0.574985211147537
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 0.5643650320897025
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 0.5703432844541353
+     },
+     {
+      "row": "Intercept",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 0.5701594396868211
+     },
+     {
+      "row": "Intercept",
+      "col": "age",
+      "value": -0.09004212094363316
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "Intercept",
+      "value": -0.6583287313368169
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 2.974606148750142
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C3]",
+      "value": 0.5695215232448754
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C4]",
+      "value": 0.5685894132110431
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C5]",
+      "value": 0.5700506896576137
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C6]",
+      "value": 0.5694261663485947
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(level)[T.C7]",
+      "value": 0.5692041369052278
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.009792213166325652
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -1.438245998048302
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -1.4373138880144702
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -1.4387751644610403
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -1.4381506411520208
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -1.437928611708655
+     },
+     {
+      "row": "C(vendor)[T.UIH]",
+      "col": "age",
+      "value": -0.010012482408767672
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "Intercept",
+      "value": -0.5673226152341542
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.5695215232448751
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C3]",
+      "value": 1.1300586501321939
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C4]",
+      "value": 0.5692574876026556
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C5]",
+      "value": 0.5693093029530442
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C6]",
+      "value": 0.5693659705131976
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(level)[T.C7]",
+      "value": 0.5693571831754901
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.0016920111997561652
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -1.1300586501321936
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -0.5692574876026557
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -0.5693093029530445
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -0.5693659705131975
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -0.5693571831754906
+     },
+     {
+      "row": "C(level)[T.C3]",
+      "col": "age",
+      "value": -5.595818425386287e-05
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "Intercept",
+      "value": -0.5749852111475449
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.5685894132110432
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C3]",
+      "value": 0.5692574876026556
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C4]",
+      "value": 1.139126253028532
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C5]",
+      "value": 0.5692933736165361
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C6]",
+      "value": 0.5712024441902933
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(level)[T.C7]",
+      "value": 0.5712037237364547
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0008446564555161429
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -0.5692574876026557
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -1.1391262530285322
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -0.5692933736165362
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -0.5712024441902932
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -0.5712037237364548
+     },
+     {
+      "row": "C(level)[T.C4]",
+      "col": "age",
+      "value": 0.00012583409643097718
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "Intercept",
+      "value": -0.5643650320897107
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.5700506896576137
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C3]",
+      "value": 0.5693093029530444
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C4]",
+      "value": 0.5692933736165362
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C5]",
+      "value": 1.1393249335948639
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C6]",
+      "value": 0.5713952197298882
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(level)[T.C7]",
+      "value": 0.5713177089519764
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.004488089825910731
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -0.5693093029530444
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -0.5692933736165363
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -1.139324933594864
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -0.5713952197298882
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -0.5713177089519764
+     },
+     {
+      "row": "C(level)[T.C5]",
+      "col": "age",
+      "value": -0.00014571405130827276
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "Intercept",
+      "value": -0.5703432844541434
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.5694261663485948
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C3]",
+      "value": 0.5693659705131977
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C4]",
+      "value": 0.5712024441902932
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C5]",
+      "value": 0.5713952197298882
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C6]",
+      "value": 1.1575909791958172
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(level)[T.C7]",
+      "value": 0.5732293698247583
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.0038315652103904038
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -0.5693659705131976
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -0.5712024441902935
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -0.5713952197298882
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -1.1575909791958172
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -0.5732293698247584
+     },
+     {
+      "row": "C(level)[T.C6]",
+      "col": "age",
+      "value": -1.775945901332485e-05
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "Intercept",
+      "value": -0.57015943968683
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]",
+      "value": 0.5692041369052276
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C3]",
+      "value": 0.5693571831754904
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C4]",
+      "value": 0.5712037237364548
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C5]",
+      "value": 0.5713177089519765
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C6]",
+      "value": 0.5732293698247584
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(level)[T.C7]",
+      "value": 1.1665305670782797
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0014757015546192364
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -0.5693571831754904
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -0.571203723736455
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -0.5713177089519766
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -0.5732293698247584
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -1.16653056707828
+     },
+     {
+      "row": "C(level)[T.C7]",
+      "col": "age",
+      "value": 3.101919591565185e-05
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "Intercept",
+      "value": -0.7610273298993016
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.009792213166325817
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C3]",
+      "value": 0.0016920111997559533
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C4]",
+      "value": -0.0008446564555163344
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C5]",
+      "value": 0.004488089825910555
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C6]",
+      "value": 0.0038315652103902134
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(level)[T.C7]",
+      "value": -0.0014757015546194453
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(sex_M)[T.1]",
+      "value": 1.6473845219775256
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": -0.0016920111997548802
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 0.0008446564555174342
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": -0.004488089825909426
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": -0.0038315652103890806
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 0.001475701554620516
+     },
+     {
+      "row": "C(sex_M)[T.1]",
+      "col": "age",
+      "value": -0.0006785566496707383
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "Intercept",
+      "value": 0.5673226152341484
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -1.4382459980483016
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(level)[T.C3]",
+      "value": -1.130058650132194
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(level)[T.C4]",
+      "value": -0.5692574876026558
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(level)[T.C5]",
+      "value": -0.5693093029530443
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(level)[T.C6]",
+      "value": -0.5693659705131975
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(level)[T.C7]",
+      "value": -0.5693571831754902
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0016920111997549235
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 2.8675075997390405
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 1.4379819624060808
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 1.4380337777564693
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 1.4380904453166223
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 1.4380816579789157
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "col": "age",
+      "value": 5.595818425396991e-05
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "Intercept",
+      "value": 0.5749852111475392
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -1.4373138880144691
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(level)[T.C3]",
+      "value": -0.5692574876026558
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(level)[T.C4]",
+      "value": -1.1391262530285322
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(level)[T.C5]",
+      "value": -0.5692933736165362
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(level)[T.C6]",
+      "value": -0.5712024441902931
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(level)[T.C7]",
+      "value": -0.5712037237364547
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.0008446564555173773
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 1.4379819624060812
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 2.8765752026353786
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 1.4380178484199615
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 1.4399269189937178
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 1.43992819853988
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "col": "age",
+      "value": -0.00012583409643087112
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "Intercept",
+      "value": 0.5643650320897049
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -1.4387751644610398
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(level)[T.C3]",
+      "value": -0.5693093029530445
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(level)[T.C4]",
+      "value": -0.5692933736165363
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(level)[T.C5]",
+      "value": -1.1393249335948639
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(level)[T.C6]",
+      "value": -0.571395219729888
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(level)[T.C7]",
+      "value": -0.5713177089519764
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.004488089825909498
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 1.4380337777564698
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 1.4380178484199615
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 2.8767738832017105
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 1.4401196945333132
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 1.4400421837554018
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "col": "age",
+      "value": 0.00014571405130837795
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "Intercept",
+      "value": 0.5703432844541375
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -1.4381506411520208
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(level)[T.C3]",
+      "value": -0.5693659705131978
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(level)[T.C4]",
+      "value": -0.5712024441902933
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(level)[T.C5]",
+      "value": -0.5713952197298883
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(level)[T.C6]",
+      "value": -1.157590979195817
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(level)[T.C7]",
+      "value": -0.5732293698247583
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0038315652103891712
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 1.4380904453166226
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 1.4399269189937185
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 1.4401196945333132
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 2.895039928802663
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 1.4419538446281837
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "col": "age",
+      "value": 1.7759459013433563e-05
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "Intercept",
+      "value": 0.5701594396868243
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]",
+      "value": -1.4379286117086538
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(level)[T.C3]",
+      "value": -0.5693571831754906
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(level)[T.C4]",
+      "value": -0.571203723736455
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(level)[T.C5]",
+      "value": -0.5713177089519765
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(level)[T.C6]",
+      "value": -0.5732293698247583
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(level)[T.C7]",
+      "value": -1.1665305670782797
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(sex_M)[T.1]",
+      "value": 0.001475701554620469
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 1.4380816579789157
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": 1.43992819853988
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 1.4400421837554018
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 1.4419538446281832
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": 2.903979516685126
+     },
+     {
+      "row": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "col": "age",
+      "value": -3.101919591554565e-05
+     },
+     {
+      "row": "age",
+      "col": "Intercept",
+      "value": -0.09004212094363315
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]",
+      "value": -0.010012482408767709
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C3]",
+      "value": -5.59581842538922e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C4]",
+      "value": 0.0001258340964309486
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C5]",
+      "value": -0.00014571405130830387
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C6]",
+      "value": -1.7759459013357103e-05
+     },
+     {
+      "row": "age",
+      "col": "C(level)[T.C7]",
+      "value": 3.1019195915618746e-05
+     },
+     {
+      "row": "age",
+      "col": "C(sex_M)[T.1]",
+      "value": -0.0006785566496707469
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C3]",
+      "value": 5.595818425402584e-05
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C4]",
+      "value": -0.00012583409643082707
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C5]",
+      "value": 0.00014571405130842324
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C6]",
+      "value": 1.7759459013476466e-05
+     },
+     {
+      "row": "age",
+      "col": "C(vendor)[T.UIH]:C(level)[T.C7]",
+      "value": -3.101919591548179e-05
+     },
+     {
+      "row": "age",
+      "col": "age",
+      "value": 0.0018549814084109428
+     }
+    ]
+   },
+   "LR": {
+    "chi2": 10.265201419786536,
+    "df": 5,
+    "p": 0.06806029737762485
+   },
+   "joint_Wald": {
+    "chi2": 10.354222434681922,
+    "df": 5,
+    "p": 0.06579856275607861,
+    "terms": [
+     "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "C(vendor)[T.UIH]:C(level)[T.C7]"
+    ]
+   },
+   "vendor_effect_reduced": {
+    "beta": 2.9451270253714683,
+    "p": 0.026947975486003615,
+    "ci95": [
+     0.3358879095216665,
+     5.55436614122127
+    ]
+   },
+   "note": "Sex-adjusted sensitivity: same fixed-effect structure plus C(sex_M); conclusions do not change (interaction p=0.96 vs 0.0 unchanged). Sex is reported because it is a known CSA determinant."
+  }
+ },
+ "tipping_point_v9": {
+  "parameterisation": "delta = assumed actual vendor difference (UIH-GE) in the missing stratum",
+  "d_observed_base": 2.251420624546114,
+  "scenarios": {
+   "qc_only_8_79": {
+    "nUf": 8,
+    "nGf": 79,
+    "note": "QC-failed stratum only (the v8 default).",
+    "grid_1d": {
+     "GE_sigma1.0": {
+      "upper_delta": 9.5420132874856,
+      "lower_delta": -29.66930993125037
+     },
+     "symmetric_sigma1.0": {
+      "upper_delta": 5.643122897644712,
+      "lower_delta": -14.833989738945693
+     },
+     "GE_sigma1.25": {
+      "upper_delta": 8.923361624571468,
+      "lower_delta": -29.36798172656472
+     },
+     "symmetric_sigma1.25": {
+      "upper_delta": 5.325435459339905,
+      "lower_delta": -14.561645005115102
+     },
+     "GE_sigma1.5": {
+      "upper_delta": 8.188618016307423,
+      "lower_delta": -29.00194196753539
+     },
+     "symmetric_sigma1.5": {
+      "upper_delta": 4.958708763431386,
+      "lower_delta": -14.242678952539167
+     }
+    }
+   },
+   "qc_plus_processing_8_83": {
+    "nUf": 8,
+    "nGf": 83,
+    "note": "QC-failed stratum + 4 GE processing failures (sensitivity scenario added in v9 in response to the sixth-round peer review).",
+    "grid_1d": {
+     "GE_sigma1.0": {
+      "upper_delta": 9.574818265369263,
+      "lower_delta": -29.68498740214901
+     },
+     "symmetric_sigma1.0": {
+      "upper_delta": 5.595917507781788,
+      "lower_delta": -14.54665824102451
+     },
+     "GE_sigma1.25": {
+      "upper_delta": 8.955232873936279,
+      "lower_delta": -29.383512900898875
+     },
+     "symmetric_sigma1.25": {
+      "upper_delta": 5.283128981359377,
+      "lower_delta": -14.277043033937998
+     },
+     "GE_sigma1.5": {
+      "upper_delta": 8.219421228176822,
+      "lower_delta": -29.01729669253387
+     },
+     "symmetric_sigma1.5": {
+      "upper_delta": 4.922224338651533,
+      "lower_delta": -13.96152616754425
+     }
+    }
+   }
+  },
+  "note": "Two missing-stratum compositions are reported. The v9 \"qc_plus_processing_8_83\" scenario adds the 4 GE processing-failure examinations noted in the sixth-round review; conclusions are robust because the upper-tipping thresholds are not materially changed."
+ },
+ "tipping_2d_v9": {
+  "GE_sigma1.0": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.00011034566362851388,
+    0.00011929292599707863,
+    0.00012969113908727956,
+    0.00014180859441539125,
+    0.0001559710430547697,
+    0.000172575048758853,
+    0.00019210457990964698,
+    0.00021515162512470614,
+    0.0002424417954486818,
+    0.0002748660869053552,
+    0.0003135202228880733,
+    0.0003597532764939097,
+    0.00041522758522350117,
+    0.0004819923062121041,
+    0.0005625733038808803,
+    0.0006600823884031268,
+    0.0007783491948853839,
+    0.000922079156525322,
+    0.0010970410094926601,
+    0.001310286983680026,
+    0.0015704081755606775,
+    0.0018878264489783781,
+    0.0022751224464953065,
+    0.002747396811336653,
+    0.00332265844709417,
+    0.004022229571600388,
+    0.004871152539228832,
+    0.005898578122532834,
+    0.007138109515761692,
+    0.008628071258681263,
+    0.010411668225809245,
+    0.012536997522428433,
+    0.015056876329146774,
+    0.018028452107462022,
+    0.021512568576741976,
+    0.025572871626437645,
+    0.030274653540442526,
+    0.035683450815609974,
+    0.04186342923275447,
+    0.04887560810535011,
+    0.05677599201196646,
+    0.0656136910538974,
+    0.07542911825998547,
+    0.08625235413855933,
+    0.09810176312216336,
+    0.11098293502438542,
+    0.12488800755547308,
+    0.139795404899254,
+    0.1556700041754321,
+    0.17246371827119664,
+    0.19011646190420187,
+    0.2085574494628582,
+    0.2277067593120311,
+    0.24747709049575928,
+    0.2677756342412656,
+    0.28850598403920397,
+    0.30957001365043707,
+    0.3308696612368418,
+    0.3523085688854532,
+    0.3737935390450474,
+    0.3952357818665942,
+    0.41655193933516105,
+    0.43766488279213395,
+    0.458504289565678,
+    0.4790070117351497,
+    0.4991172554977903,
+    0.5187865932594226,
+    0.5379738326058483,
+    0.5566447669591505,
+    0.5747718322425668,
+    0.5923336925340451,
+    0.609314775732056,
+    0.6257047779123195,
+    0.6414981525108934,
+    0.6566935978824144,
+    0.6712935542702166,
+    0.6853037188734221,
+    0.6987325855608084,
+    0.7115910138949462,
+    0.7238918305051436,
+    0.7356494644825364
+   ]
+  },
+  "GE_sigma1.25": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.00019561544705219938,
+    0.00021273453319655393,
+    0.0002324960763845783,
+    0.00025536916561715375,
+    0.00028191694050014874,
+    0.00031281667630292945,
+    0.0003488842381395346,
+    0.000391103818658557,
+    0.00044066403913600396,
+    0.0004990016769966135,
+    0.0005678544797298727,
+    0.0006493247288670445,
+    0.000745955416737889,
+    0.0008608210760818823,
+    0.000997635434227254,
+    0.0011608781172459857,
+    0.0013559425639232021,
+    0.0015893070739670197,
+    0.0018687304507565164,
+    0.002203472941592607,
+    0.0026045420626364204,
+    0.00308496136307386,
+    0.003660058192342169,
+    0.004347764074649965,
+    0.005168918400881944,
+    0.006147562914014037,
+    0.007311211058186577,
+    0.008691072931905339,
+    0.01032221365951644,
+    0.012243620863989932,
+    0.0144981560161208,
+    0.01713236517118747,
+    0.02019612734150096,
+    0.02374212372410207,
+    0.027825118253146413,
+    0.03250104928822161,
+    0.037825943236598936,
+    0.04385467284193804,
+    0.05063959485099023,
+    0.05822911276389003,
+    0.0666662193351937,
+    0.07598707947766761,
+    0.08621971650670056,
+    0.09738286284568233,
+    0.1094850303651032,
+    0.12252384581321789,
+    0.1364856840302563,
+    0.15134561681045736,
+    0.1670676795386234,
+    0.18360544226885397,
+    0.20090285783678638,
+    0.21889534781869657,
+    0.23751107832625218,
+    0.25667237211248783,
+    0.2762972013220768,
+    0.2963007062402211,
+    0.31659668915845357,
+    0.3370990384152682,
+    0.35772304514125103,
+    0.37838658358858634,
+    0.3990111345428168,
+    0.4195226396748747,
+    0.4398521823757582,
+    0.45993649732656755,
+    0.47971831661055825,
+    0.49914656449550704,
+    0.5181764161156647,
+    0.5367692372429954,
+    0.5548924232852883,
+    0.5725191557397538,
+    0.5896280937336175,
+    0.6062030171645318,
+    0.6222324364699211,
+    0.637709182343881,
+    0.6526299869012466,
+    0.6669950659559201,
+    0.6808077103085666,
+    0.6940738922802661,
+    0.7068018922197736,
+    0.7190019483729455,
+    0.7306859323425989
+   ]
+  },
+  "GE_sigma1.5": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.0003562132703927323,
+    0.0003889341845795203,
+    0.0004264448649227096,
+    0.0004695479313512264,
+    0.0005191942080651702,
+    0.0005765112080828633,
+    0.0006428370149590997,
+    0.0007197604879742172,
+    0.0008091688318509608,
+    0.0009133036832679019,
+    0.001034826965565835,
+    0.0011768978383454225,
+    0.001343262104646971,
+    0.0015383554154122317,
+    0.0017674215048949509,
+    0.002036646473366451,
+    0.00235330977319613,
+    0.0027259520177078654,
+    0.0031645589864166494,
+    0.0036807602171755847,
+    0.004288039336747075,
+    0.0050019517833099795,
+    0.0058403438368107175,
+    0.0068235649446733455,
+    0.007974663295488345,
+    0.009319552575709811,
+    0.010887136007785769,
+    0.012709372311584637,
+    0.014821267378087146,
+    0.01726077542599938,
+    0.02006859444265433,
+    0.023287842959996,
+    0.02696360877943686,
+    0.031142365127830134,
+    0.035871255768633946,
+    0.04119725754143635,
+    0.04716623626463247,
+    0.05382191940871566,
+    0.06120481586219673,
+    0.06935111888333215,
+    0.0782916324174075,
+    0.08805076292344276,
+    0.09864561841406778,
+    0.11008525347819148,
+    0.12237009374687426,
+    0.1354915658979321,
+    0.14943195036529747,
+    0.1641644640384098,
+    0.17965357008136837,
+    0.19585550224532364,
+    0.21271898230281727,
+    0.23018610199883496,
+    0.24819333554252604,
+    0.26667264534452195,
+    0.2855526424623094,
+    0.30475976392852094,
+    0.32421943156243366,
+    0.343857160676857,
+    0.3635995919161052,
+    0.38337542490862603,
+    0.4031162381197436,
+    0.422757184917729,
+    0.4422375611481806,
+    0.46150124424211963,
+    0.48049700792313005,
+    0.4991787198535814,
+    0.5175054320496234,
+    0.5354413756253067,
+    0.5529558724587237,
+    0.5700231767911315,
+    0.5866222596717909,
+    0.6027365486488849,
+    0.6183536342815745,
+    0.6334649540032828,
+    0.6480654626856843,
+    0.6621532980073814,
+    0.675729447479602,
+    0.6887974227684713,
+    0.7013629458136386,
+    0.7134336501989118,
+    0.7250188002964928
+   ]
+  },
+  "symmetric_sigma1.0": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.00120798977312786,
+    0.0007168571529914125,
+    0.0004163815922554326,
+    0.00023684177424732056,
+    0.00013200458864592868,
+    7.213994795340906e-05,
+    3.8685211030342614e-05,
+    2.0372983163707836e-05,
+    1.0546110351450366e-05,
+    5.371209981008818e-06,
+    2.694212233755877e-06,
+    2.6525142886614465e-06,
+    4.76448376073664e-06,
+    8.522807863629033e-06,
+    1.5168089488710255e-05,
+    2.6830068801109008e-05,
+    4.7120258140307296e-05,
+    8.20793696597532e-05,
+    0.0001416583826836436,
+    0.0002419762756384568,
+    0.00040866550403357665,
+    0.0006816726648121625,
+    0.0011218990525056684,
+    0.0018200030874005247,
+    0.0029074918285084544,
+    0.004569848164464291,
+    0.0070608371145022344,
+    0.010716317587667324,
+    0.01596494115537678,
+    0.023332235247425736,
+    0.033434034578696085,
+    0.04695538964134116,
+    0.0646122569043253,
+    0.0870956056149876,
+    0.11500090368641934,
+    0.1487497389707286,
+    0.1885137308366643,
+    0.23415288545780902,
+    0.28518029684178137,
+    0.3407622182406066,
+    0.39975733571896954,
+    0.46079256763160753,
+    0.5223663425121259,
+    0.5829655645509012,
+    0.641180447860542,
+    0.6958024590577936,
+    0.7458943327384338,
+    0.7908264827248827,
+    0.8302798212073279,
+    0.8642198260094262,
+    0.8928498679123922,
+    0.9165530483886049,
+    0.9358312992015028,
+    0.9512487680667331,
+    0.9633841821838163,
+    0.9727945103660853,
+    0.9799902388300678,
+    0.9854211440252127,
+    0.9894706241975708,
+    0.9924563565145896,
+    0.9946351357340842,
+    0.9962100704840383,
+    0.9973387327723982,
+    0.9981412801655611,
+    0.9987079407088745,
+    0.9991055421617443,
+    0.999382975753276,
+    0.9995756198166648,
+    0.9997088255775173,
+    0.9998006022481435,
+    0.9998636457778552,
+    0.9999068464721793,
+    0.9999363933927,
+    0.9999565733781385,
+    0.999970342913843,
+    0.9999797336036343,
+    0.9999861373335213,
+    0.999990505422312,
+    0.9999934868686846,
+    0.9999955238299487,
+    0.9999969172798263
+   ]
+  },
+  "symmetric_sigma1.25": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.0019522748838974868,
+    0.0012142281524291088,
+    0.0007405925659632606,
+    0.0004431331540931671,
+    0.00026022667067893135,
+    0.0001500543436498969,
+    8.500991778015443e-05,
+    4.734640682590996e-05,
+    2.5941702416432122e-05,
+    1.399346318964323e-05,
+    7.437212465433163e-06,
+    7.367608761626973e-06,
+    1.2709625111799563e-05,
+    2.1810595101134667e-05,
+    3.7201249465366596e-05,
+    6.301212074483484e-05,
+    0.00010589735942803289,
+    0.00017642381506050034,
+    0.00029111048471986307,
+    0.0004753439001849844,
+    0.0007674220237251751,
+    0.001223974303215766,
+    0.0019269433408002036,
+    0.0029921641534514888,
+    0.004579311607468082,
+    0.00690258857955405,
+    0.010241006561206594,
+    0.014946519001304963,
+    0.02144771180931867,
+    0.030246394588278346,
+    0.04190446272910184,
+    0.05701899568198758,
+    0.0761848269897009,
+    0.09994573087180082,
+    0.12873769186871845,
+    0.1628300411380577,
+    0.20227201227729874,
+    0.24685294910669836,
+    0.2960836077513946,
+    0.34920366160787114,
+    0.4052169445013227,
+    0.46295180021846355,
+    0.5211399865885535,
+    0.578504729638794,
+    0.6338473199843994,
+    0.6861222842951242,
+    0.7344934228977216,
+    0.7783663177855334,
+    0.8173965539385765,
+    0.8514761577289851,
+    0.8807031210630138,
+    0.9053401002301551,
+    0.9257684769311711,
+    0.9424431755355751,
+    0.9558522847338446,
+    0.9664839848820184,
+    0.9748018247585678,
+    0.9812282138861279,
+    0.9861351848875266,
+    0.9898410336812395,
+    0.9926113054756529,
+    0.9946626761899645,
+    0.9961684940219905,
+    0.9972650191540747,
+    0.9980576758528628,
+    0.9986268761449996,
+    0.9990331712419566,
+    0.9993216322929162,
+    0.9995254602946521,
+    0.9996688845427988,
+    0.9997694394649262,
+    0.9998397199808443,
+    0.9998887131065245,
+    0.9999227939773857,
+    0.9999464617503308,
+    0.9999628774885296,
+    0.9999742536147073,
+    0.9999821335699575,
+    0.9999875911852074,
+    0.9999913719240443,
+    0.9999939924018298
+   ]
+  },
+  "symmetric_sigma1.5": {
+   "deltas": [
+    -10.0,
+    -9.5,
+    -9.0,
+    -8.5,
+    -8.0,
+    -7.5,
+    -7.0,
+    -6.5,
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ],
+   "tost_p": [
+    0.0031635377795441455,
+    0.002062556863829279,
+    0.001321437565713457,
+    0.0008321530249653097,
+    0.0005152380709840809,
+    0.0003137740694350022,
+    0.000188022454355119,
+    0.00011091424650122583,
+    6.44425097472423e-05,
+    3.689840711718073e-05,
+    2.083311239786667e-05,
+    2.0751163324200655e-05,
+    3.425153622360353e-05,
+    5.619628397745012e-05,
+    9.15822454733208e-05,
+    0.00014814134153801886,
+    0.00023767758843639712,
+    0.0003779506144283722,
+    0.0005952626450334864,
+    0.0009279118102918303,
+    0.001430654679764512,
+    0.002180260171529004,
+    0.0032821193863948276,
+    0.004877688193772089,
+    0.0071522767424475,
+    0.0103423733950105,
+    0.014741333629786973,
+    0.020701938255748648,
+    0.028634116686045617,
+    0.03899614216336267,
+    0.05227793328868094,
+    0.06897580150244932,
+    0.08955906181226926,
+    0.11443027681909605,
+    0.14388233678551957,
+    0.17805681909514434,
+    0.2169088203796821,
+    0.2601834600572309,
+    0.3074083808418654,
+    0.35790486058257076,
+    0.41081783103629804,
+    0.4651625577193949,
+    0.5198834294046635,
+    0.5739186632411459,
+    0.6262640472430869,
+    0.6760292131225294,
+    0.7224812431619347,
+    0.7650723746555139,
+    0.8034507873424093,
+    0.8374555519706823,
+    0.8670984677102974,
+    0.8925365374110317,
+    0.9140391802255976,
+    0.9319540413311982,
+    0.9466745900265316,
+    0.9586117943447854,
+    0.9681712056610747,
+    0.9757359234151975,
+    0.9816552271947361,
+    0.9862381973529736,
+    0.9897513898659233,
+    0.9924195521800144,
+    0.9944284170339165,
+    0.9959287418817654,
+    0.997040930195747,
+    0.9978597454258381,
+    0.9984587876017592,
+    0.9988945350999714,
+    0.9992098561083914,
+    0.9994369670022831,
+    0.9995998622650397,
+    0.9997162680011639,
+    0.9997991837972389,
+    0.9998580803815212,
+    0.9998998170024507,
+    0.9999293355277994,
+    0.999950179937286,
+    0.9999648814181699,
+    0.9999752414203162,
+    0.999982538154169,
+    0.9999876762448507
+   ]
+  }
+ },
+ "margin_sensitivity_c2c5_v8": {
+  "n": 127,
+  "UIH_n": 51,
+  "GE_n": 76,
+  "diff": 1.3771956914344514,
+  "se": 1.3211913648581872,
+  "df": 104.97613647387104,
+  "margins": [
+   {
+    "margin_mm2": 3.0,
+    "tost_p": 0.11104268389512018,
+    "equivalent": false
+   },
+   {
+    "margin_mm2": 4.0,
+    "tost_p": 0.024866398017600325,
+    "equivalent": true
+   },
+   {
+    "margin_mm2": 5.0,
+    "tost_p": 0.00358957100968022,
+    "equivalent": true
+   },
+   {
+    "margin_mm2": 6.0,
+    "tost_p": 0.000343256192489486,
+    "equivalent": true
+   },
+   {
+    "margin_mm2": 7.0,
+    "tost_p": 2.270443661087341e-05,
+    "equivalent": true
+   }
+  ]
+ },
+ "margin_sensitivity_wholecord_v8": {
+  "diff": 2.251420624546114,
+  "margins": [
+   {
+    "margin_mm2": 3.0,
+    "tost_p": 0.26599572471256366,
+    "equivalent": false
+   },
+   {
+    "margin_mm2": 4.0,
+    "tost_p": 0.07297580743181115,
+    "equivalent": false
+   },
+   {
+    "margin_mm2": 5.0,
+    "tost_p": 0.011624908405688791,
+    "equivalent": true
+   },
+   {
+    "margin_mm2": 6.0,
+    "tost_p": 0.001091360831180196,
+    "equivalent": true
+   },
+   {
+    "margin_mm2": 7.0,
+    "tost_p": 6.328198564735431e-05,
+    "equivalent": true
+   }
+  ]
+ },
+ "age_matching_v8": {
+  "n_pairs": 50,
+  "diff_mean": 2.767991999999999,
+  "diff_sd": 9.479114881133713,
+  "t": 2.0648192769196845,
+  "p": 0.04425283292991255,
+  "ci95": [
+   0.07405735789901868,
+   5.46192664210098
+  ],
+  "dz": 0.2920095425269225,
+  "note": "greedy nearest-neighbour in UIH row order; caliper 3y; result is order-dependent (a limitation acknowledged in the manuscript); no random seed needed (deterministic)."
+ },
+ "age_stratified_tertiles_v8": {
+  "strata": [
+   {
+    "n_a": 7,
+    "n_b": 28,
+    "diff": 1.849978571428565,
+    "se": 1.8366515492683158,
+    "df": 13.015768920844883,
+    "ci_lo": -1.4023076773920051,
+    "ci_hi": 5.102264820249135,
+    "t": 1.0072561516448553,
+    "p": 0.33217099225242996,
+    "cohens_d": 0.3427782093736247,
+    "UIH_mean": 69.5968857142857,
+    "UIH_sd": 3.9469404469067646,
+    "GE_mean": 67.74690714285714,
+    "GE_sd": 5.669103457365852,
+    "welch_p": 0.33217099225242996,
+    "ci90": [
+     -1.4023076773920051,
+     5.102264820249135
+    ],
+    "n_UIH": 7,
+    "n_GE": 28,
+    "label": "20-39 y"
+   },
+   {
+    "n_a": 27,
+    "n_b": 33,
+    "diff": 3.0906067340067125,
+    "se": 1.8175840366566385,
+    "df": 56.55318571688452,
+    "ci_lo": 0.05115698887885012,
+    "ci_hi": 6.130056479134575,
+    "t": 1.7003927585608312,
+    "p": 0.09455082958364551,
+    "cohens_d": 0.4392537732123905,
+    "UIH_mean": 68.22587037037036,
+    "UIH_sd": 6.86150770238273,
+    "GE_mean": 65.13526363636365,
+    "GE_sd": 7.174720408438321,
+    "welch_p": 0.09455082958364551,
+    "ci90": [
+     0.05115698887885012,
+     6.130056479134575
+    ],
+    "n_UIH": 27,
+    "n_GE": 33,
+    "label": "40-59 y"
+   },
+   {
+    "n_a": 17,
+    "n_b": 20,
+    "diff": 3.5751455882352943,
+    "se": 2.166994067055771,
+    "df": 32.38285546732977,
+    "ci_lo": -0.09420835062666244,
+    "ci_hi": 7.2444995270972505,
+    "t": 1.6498178940991453,
+    "p": 0.10864842917016955,
+    "cohens_d": 0.5496483267330009,
+    "UIH_mean": 65.39997058823529,
+    "UIH_sd": 6.913686156708003,
+    "GE_mean": 61.824825,
+    "GE_sd": 6.138654729008115,
+    "welch_p": 0.10864842917016955,
+    "ci90": [
+     -0.09420835062666244,
+     7.2444995270972505
+    ],
+    "n_UIH": 17,
+    "n_GE": 20,
+    "label": "60-86 y"
+   }
+  ]
+ },
+ "age_stratified_median_v8": {
+  "median": 54.0,
+  "younger": {
+   "n_a": 25,
+   "n_b": 47,
+   "diff": 3.235503063829782,
+   "se": 1.5679860243402803,
+   "df": 48.43742548835358,
+   "ci_lo": 0.6061062352826228,
+   "ci_hi": 5.8648998923769415,
+   "t": 2.0634769784960922,
+   "p": 0.044447825917141776,
+   "cohens_d": 0.5131789506195805
+  },
+  "older": {
+   "n_a": 26,
+   "n_b": 34,
+   "diff": 1.793621493212683,
+   "se": 1.7440310501553027,
+   "df": 56.64248296416954,
+   "ci_lo": -1.122752912020943,
+   "ci_hi": 4.709995898446309,
+   "t": 1.0284343808288072,
+   "p": 0.3081173298377473,
+   "cohens_d": 0.263673393049829
+  }
+ },
+ "vertebral_labeling_qc": {
+  "method": "sct vertebral labeling (sct_label_vertebrae) default; no manual correction applied",
+  "spot_check_status": "pending; to be performed on 132 participants blinded to vendor before submission",
+  "spot_check_n_planned": 132,
+  "spot_check_c6_c7_focus": true,
+  "note": "Reported as a transparency placeholder. The per-level sensitivity to mis-labeling is bounded by the L2–C7 slice count statistics already exported in table1; no result in this manuscript is contingent on completion of the manual spot-check."
+ },
+ "angle_correction_check": {
+  "whole_cord_endpoint": "non-angle-corrected per-subject mean CSA (no cord-angle normalisation)",
+  "per_level_endpoint": "angle-corrected CSA at the C2–C7 mid-vertebral slice (sct_process_segmentation)",
+  "practical_difference_note": "The whole-cord and per-level CSA values therefore describe slightly different physical quantities. Direct absolute-CSA comparison between them is not appropriate; the whole-cord endpoint is used for the primary inference and per-level estimates for layer-wise sensitivity only.",
+  "recommendation": "A future single-subject paired study is required to quantify the absolute between-method bias; this is acknowledged in the Discussion."
+ }
+}
