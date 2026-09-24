@@ -1,0 +1,491 @@
+{
+ "base_stats": {
+  "n": 132,
+  "UIH_n": 51,
+  "GE_n": 81,
+  "UIH_mean": 67.4720852088278,
+  "UIH_sd": 6.636683304362305,
+  "GE_mean": 65.22066400085475,
+  "GE_sd": 6.745877799186289,
+  "diff": 2.2514212079730527,
+  "qc_fail_stratum": {
+   "UIH_n": 8,
+   "GE_n": 79,
+   "total": 87
+  }
+ },
+ "tipping_point_corrected_1d": {
+  "GE_sigma1.0": {
+   "upper_delta": 9.542010003326954,
+   "lower_delta": -29.66931222387573
+  },
+  "GE_sigma1.25": {
+   "upper_delta": 8.92335788296871,
+   "lower_delta": -29.367983851615428
+  },
+  "GE_sigma1.5": {
+   "upper_delta": 8.188613748493264,
+   "lower_delta": -29.001943888924462
+  },
+  "symmetric_sigma1.0": {
+   "upper_delta": 3.391700343188706,
+   "lower_delta": -17.085412003176884
+  },
+  "symmetric_sigma1.25": {
+   "upper_delta": 3.074012707536332,
+   "lower_delta": -16.813067108521782
+  },
+  "symmetric_sigma1.5": {
+   "upper_delta": 2.707285795565957,
+   "lower_delta": -16.494100874423967
+  }
+ },
+ "tipping_point_2d_corrected": {
+  "method": "Pooled Welch-Satterthwaite; merged per-vendor variance includes WITHIN-stratum SS + BETWEEN-stratum SS [n_base(m_base-m_pool)^2 + n_fail(m_fail-m_pool)^2] (v7 correction of v6 formula). Two anchoring scenarios: GE-anchored (GE-fail mean = observed GE mean; UIH-fail = mG + delta) and symmetric MNAR (both vendor fail means shift by +/- delta/2). SD of fail stratum = sigma_factor x base SD.",
+  "scenarios": {
+   "GE": [
+    {
+     "sigma_factor": 1.0,
+     "delta_-10_tost_p": 0.0001,
+     "delta_-5_tost_p": 0.0003,
+     "delta_0_tost_p": 0.0016,
+     "delta_2.25_tost_p": 0.0037,
+     "delta_5_tost_p": 0.0106,
+     "delta_8_tost_p": 0.0307,
+     "delta_10_tost_p": 0.0573,
+     "delta_15_tost_p": 0.1907,
+     "delta_20_tost_p": 0.3954,
+     "delta_25_tost_p": 0.5922,
+     "delta_30_tost_p": 0.7354
+    },
+    {
+     "sigma_factor": 1.25,
+     "delta_-10_tost_p": 0.0002,
+     "delta_-5_tost_p": 0.0006,
+     "delta_0_tost_p": 0.0027,
+     "delta_2.25_tost_p": 0.0058,
+     "delta_5_tost_p": 0.0147,
+     "delta_8_tost_p": 0.0382,
+     "delta_10_tost_p": 0.0672,
+     "delta_15_tost_p": 0.2014,
+     "delta_20_tost_p": 0.3992,
+     "delta_25_tost_p": 0.5895,
+     "delta_30_tost_p": 0.7304
+    },
+    {
+     "sigma_factor": 1.5,
+     "delta_-10_tost_p": 0.0004,
+     "delta_-5_tost_p": 0.0011,
+     "delta_0_tost_p": 0.0044,
+     "delta_2.25_tost_p": 0.0088,
+     "delta_5_tost_p": 0.0203,
+     "delta_8_tost_p": 0.0476,
+     "delta_10_tost_p": 0.0788,
+     "delta_15_tost_p": 0.2132,
+     "delta_20_tost_p": 0.4033,
+     "delta_25_tost_p": 0.5865,
+     "delta_30_tost_p": 0.7248
+    }
+   ],
+   "symmetric": [
+    {
+     "sigma_factor": 1.0,
+     "delta_-10_tost_p": 0.0001,
+     "delta_-5_tost_p": 0.0,
+     "delta_0_tost_p": 0.0037,
+     "delta_2.25_tost_p": 0.023,
+     "delta_5_tost_p": 0.1257,
+     "delta_8_tost_p": 0.4119,
+     "delta_10_tost_p": 0.6471,
+     "delta_15_tost_p": 0.9616,
+     "delta_20_tost_p": 0.9985,
+     "delta_25_tost_p": 1.0,
+     "delta_30_tost_p": 1.0
+    },
+    {
+     "sigma_factor": 1.25,
+     "delta_-10_tost_p": 0.0002,
+     "delta_-5_tost_p": 0.0001,
+     "delta_0_tost_p": 0.0058,
+     "delta_2.25_tost_p": 0.0298,
+     "delta_5_tost_p": 0.1395,
+     "delta_8_tost_p": 0.4167,
+     "delta_10_tost_p": 0.6396,
+     "delta_15_tost_p": 0.954,
+     "delta_20_tost_p": 0.9977,
+     "delta_25_tost_p": 0.9999,
+     "delta_30_tost_p": 1.0
+    },
+    {
+     "sigma_factor": 1.5,
+     "delta_-10_tost_p": 0.0003,
+     "delta_-5_tost_p": 0.0001,
+     "delta_0_tost_p": 0.0088,
+     "delta_2.25_tost_p": 0.0384,
+     "delta_5_tost_p": 0.1547,
+     "delta_8_tost_p": 0.4216,
+     "delta_10_tost_p": 0.6318,
+     "delta_15_tost_p": 0.9447,
+     "delta_20_tost_p": 0.9966,
+     "delta_25_tost_p": 0.9999,
+     "delta_30_tost_p": 1.0
+    }
+   ]
+  },
+  "note": "Conditional sensitivity analysis: the QC-failed stratum did not undergo the same DCM screening as the base cohort; conclusions are conditional on the stated assumptions, not statements about the unobserved data."
+ },
+ "margin_sensitivity_c2c5": {
+  "n_complete": 127,
+  "UIH_n": 51,
+  "GE_n": 76,
+  "diff": 1.3772087848297332,
+  "se": 1.321191640508373,
+  "df_welch": 104.97611838832675,
+  "margins": [
+   {
+    "margin_mm2": 3.0,
+    "tost_p": 0.11104458379721661,
+    "equivalence": "NO"
+   },
+   {
+    "margin_mm2": 4.0,
+    "tost_p": 0.024866981221562955,
+    "equivalence": "YES"
+   },
+   {
+    "margin_mm2": 5.0,
+    "tost_p": 0.003589677868209449,
+    "equivalence": "YES"
+   },
+   {
+    "margin_mm2": 6.0,
+    "tost_p": 0.0003432684692971044,
+    "equivalence": "YES"
+   },
+   {
+    "margin_mm2": 7.0,
+    "tost_p": 2.2705373348114015e-05,
+    "equivalence": "YES"
+   }
+  ]
+ },
+ "mixed_model_v7": {
+  "software": "statsmodels 0.15.0, Python 3.10; ML (REML=False)",
+  "data": "770 observations, 130 subjects, 6 levels C2-C7 (available-case)",
+  "optimizer_reduced": "cg",
+  "optimizer_full": "bfgs",
+  "reduced": {
+   "model": "reduced: csa ~ vendor + level + age + (1|subject)",
+   "n_obs": 770,
+   "n_groups": 130,
+   "converged": true,
+   "llf": -2684.9945747238976,
+   "aic_statsmodels": 5389.989149447795,
+   "bic_statsmodels": 5436.4530545962725,
+   "aic_manual_k_total": 5387.989149447795,
+   "bic_manual_k_total": 5429.806664081425,
+   "n_fixed_params_incl_intercept": 8,
+   "n_variance_params": 1,
+   "k_total_params": 9,
+   "coefficients": [
+    {
+     "term": "Intercept",
+     "coef": 73.99513802247317,
+     "se": 2.314791414647123,
+     "z": 31.966222768176856,
+     "p": 3.2152798347753764e-224,
+     "ci95_lo": 69.45823021804229,
+     "ci95_hi": 78.53204582690405
+    },
+    {
+     "term": "C(vendor)[T.UIH]",
+     "coef": 2.942051174802786,
+     "se": 1.331742708493268,
+     "z": 2.2091738562108736,
+     "p": 0.027162550589898964,
+     "ci95_lo": 0.3318834294821569,
+     "ci95_hi": 5.552218920123416
+    },
+    {
+     "term": "C(level)[T.C3]",
+     "coef": -0.7589829866195678,
+     "se": 0.8344189919201381,
+     "z": -0.9095945729531162,
+     "p": 0.3630363617528608,
+     "ci95_lo": -2.3944141587992567,
+     "ci95_hi": 0.8764481855601213
+    },
+    {
+     "term": "C(level)[T.C4]",
+     "coef": -0.0858005777230576,
+     "se": 0.836439268171233,
+     "z": -0.10257837118365992,
+     "p": 0.9182976095654599,
+     "ci95_lo": -1.7251914185937145,
+     "ci95_hi": 1.553590263147599
+    },
+    {
+     "term": "C(level)[T.C5]",
+     "coef": -4.070503156984096,
+     "se": 0.8364815628389324,
+     "z": -4.866219816213555,
+     "p": 1.137529954315856e-06,
+     "ci95_lo": -5.709976893880182,
+     "ci95_hi": -2.431029420088011
+    },
+    {
+     "term": "C(level)[T.C6]",
+     "coef": -9.251422363999101,
+     "se": 0.8404803515357985,
+     "z": -11.007303558130896,
+     "p": 3.5239294097946413e-28,
+     "ci95_lo": -10.89873358272283,
+     "ci95_hi": -7.604111145275372
+    },
+    {
+     "term": "C(level)[T.C7]",
+     "coef": -16.044434820047456,
+     "se": 0.842401826316948,
+     "z": -19.046058922017156,
+     "p": 7.083887178145666e-81,
+     "ci95_lo": -17.69551206013944,
+     "ci95_hi": -14.393357579955472
+    },
+    {
+     "term": "age",
+     "coef": -0.05045057700437302,
+     "se": 0.04301542983606654,
+     "z": -1.172848375493215,
+     "p": 0.24085661483848053,
+     "ci95_lo": -0.13475927026257312,
+     "ci95_hi": 0.033858116253827085
+    },
+    {
+     "term": "Group Var",
+     "coef": 1.0141788868928756,
+     "se": 0.16305492980100825,
+     "z": 6.219860314132032,
+     "p": 4.975976758016227e-10,
+     "ci95_lo": 0.6945970969811928,
+     "ci95_hi": 1.3337606768045585
+    }
+   ],
+   "random_effect_variance": 45.691135593485015,
+   "residual_variance": 45.05234351058939
+  },
+  "full": {
+   "model": "full: csa ~ vendor*level + age + (1|subject)",
+   "n_obs": 770,
+   "n_groups": 130,
+   "converged": true,
+   "llf": -2679.8610904247703,
+   "aic_statsmodels": 5389.722180849541,
+   "bic_statsmodels": 5459.418038572257,
+   "aic_manual_k_total": 5387.722180849541,
+   "bic_manual_k_total": 5452.771648057409,
+   "n_fixed_params_incl_intercept": 13,
+   "n_variance_params": 1,
+   "k_total_params": 14,
+   "coefficients": [
+    {
+     "term": "Intercept",
+     "coef": 74.36654712458206,
+     "se": 2.3572220814232225,
+     "z": 31.54838388400031,
+     "p": 1.8869683617154424e-218,
+     "ci95_lo": 69.74647674143,
+     "ci95_hi": 78.98661750773411
+    },
+    {
+     "term": "C(vendor)[T.UIH]",
+     "coef": 2.0256498516109844,
+     "se": 1.7250896456735667,
+     "z": 1.1742287461357193,
+     "p": 0.24030341482505635,
+     "ci95_lo": -1.3554637240121692,
+     "ci95_hi": 5.406763427234138
+    },
+    {
+     "term": "C(level)[T.C3]",
+     "coef": -0.4940418350881145,
+     "se": 1.0630676913524681,
+     "z": -0.46473224528118146,
+     "p": 0.6421232137431858,
+     "ci95_lo": -2.577616223267094,
+     "ci95_hi": 1.5895325530908653
+    },
+    {
+     "term": "C(level)[T.C4]",
+     "coef": -0.2939893776349543,
+     "se": 1.0673246626774346,
+     "z": -0.2754451273499743,
+     "p": 0.7829742777738443,
+     "ci95_lo": -2.385907276294088,
+     "ci95_hi": 1.7979285210241795
+    },
+    {
+     "term": "C(level)[T.C5]",
+     "coef": -3.907813277303978,
+     "se": 1.067414329269158,
+     "z": -3.6610088230496185,
+     "p": 0.000251224106278951,
+     "ci95_lo": -5.999906919253506,
+     "ci95_hi": -1.8157196353544496
+    },
+    {
+     "term": "C(level)[T.C6]",
+     "coef": -10.37781571490074,
+     "se": 1.075938940898184,
+     "z": -9.645357483053298,
+     "p": 5.143167912850613e-22,
+     "ci95_lo": -12.48661728862535,
+     "ci95_hi": -8.269014141176129
+    },
+    {
+     "term": "C(level)[T.C7]",
+     "coef": -17.41976960782564,
+     "se": 1.0800861420754733,
+     "z": -16.128129904853825,
+     "p": 1.6184741414983425e-58,
+     "ci95_lo": -19.53669954649438,
+     "ci95_hi": -15.3028396691569
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C3]",
+     "coef": -0.6848405178532059,
+     "se": 1.693412825920345,
+     "z": -0.4044143916773544,
+     "p": 0.6859080189221866,
+     "ci95_lo": -4.0038686676152775,
+     "ci95_hi": 2.634187631908866
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C4]",
+     "coef": 0.5166364364583419,
+     "se": 1.69608844644186,
+     "z": 0.3046046552243003,
+     "p": 0.7606672740630556,
+     "ci95_lo": -2.807635833162196,
+     "ci95_hi": 3.84090870607888
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C5]",
+     "coef": -0.42183378151968987,
+     "se": 1.6961448738015246,
+     "z": -0.24870150423781018,
+     "p": 0.8035916851810504,
+     "ci95_lo": -3.746216646732913,
+     "ci95_hi": 2.9025490836935335
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C6]",
+     "coef": 2.7984627737241277,
+     "se": 1.7015224615429465,
+     "z": 1.6446816524458172,
+     "p": 0.10003547841906803,
+     "ci95_lo": -0.5364599697859869,
+     "ci95_hi": 6.133385517234242
+    },
+    {
+     "term": "C(vendor)[T.UIH]:C(level)[T.C7]",
+     "coef": 3.3959852941000017,
+     "se": 1.7041479269410684,
+     "z": 1.9927761202020575,
+     "p": 0.04628596775513659,
+     "ci95_lo": 0.05591673296691235,
+     "ci95_hi": 6.7360538552330915
+    },
+    {
+     "term": "age",
+     "coef": -0.05061124847312837,
+     "se": 0.04308230843620964,
+     "z": -1.1747571174851632,
+     "p": 0.2400919008275899,
+     "ci95_lo": -0.1350510213789454,
+     "ci95_hi": 0.03382852443268866
+    },
+    {
+     "term": "Group Var",
+     "coef": 1.0378795990849858,
+     "se": 0.16636358797048012,
+     "z": 6.238622355687287,
+     "p": 4.4144126518409647e-10,
+     "ci95_lo": 0.7118129583239838,
+     "ci95_hi": 1.3639462398459878
+    }
+   ],
+   "random_effect_variance": 45.985455014500076,
+   "residual_variance": 44.307119106148456
+  },
+  "LR_test": {
+   "chi2": 10.266968598254607,
+   "df": 5,
+   "p": 0.06801470161565254,
+   "formula": "LR = 2 x (llf_full - llf_reduced)"
+  },
+  "joint_Wald_test": {
+   "chi2": 10.355996289769847,
+   "df": 5,
+   "p": 0.06575421664274224,
+   "terms": [
+    "C(vendor)[T.UIH]:C(level)[T.C3]",
+    "C(vendor)[T.UIH]:C(level)[T.C4]",
+    "C(vendor)[T.UIH]:C(level)[T.C5]",
+    "C(vendor)[T.UIH]:C(level)[T.C6]",
+    "C(vendor)[T.UIH]:C(level)[T.C7]"
+   ]
+  },
+  "sanity": {
+   "llf_full_ge_reduced": true,
+   "delta_AIC_expected_from_LR": -0.26696859825460706,
+   "note": "AIC/BIC reported both as statsmodels object output and manual with k = total estimated parameters (fixed + variance components). All quantities exported directly from the fitted result objects; no manual transcription."
+  },
+  "vendor_effect_reduced": {
+   "beta": 2.942051174802786,
+   "p": 0.027162550589898964,
+   "ci95": [
+    0.3318834294821569,
+    5.552218920123416
+   ]
+  }
+ },
+ "age_matching_v7": {
+  "method": "1:1 nearest-neighbour without replacement, caliper +/-3 years, seed=42",
+  "n_pairs": 50,
+  "pre_match_smd_age": 0.38975472656375776,
+  "post_match_smd_age": -0.007407822179086399,
+  "paired_diff_mean": 2.767992227854902,
+  "paired_diff_sd": 9.479116507079405,
+  "paired_ci95": [
+   0.07405712366526851,
+   5.461927332044535
+  ],
+  "paired_t": 2.064819092714064,
+  "paired_df": 49,
+  "paired_p": 0.04425285109306431,
+  "cohens_dz": 0.29200951647631385,
+  "effect_measure_note": "Cohen's dz = mean paired difference / SD of paired differences. Paired eta^2 removed (v6 value 3.9% was inconsistent with t^2/(t^2+df); per reviewer request only dz is reported)."
+ },
+ "age_stratified_v7": {
+  "younger_le_median": {
+   "n_UIH": 25,
+   "n_GE": 47,
+   "median_age_split": 54.0,
+   "UIH_mean": 69.61685224418854,
+   "GE_mean": 66.38135517954896,
+   "diff": 3.235497064639574,
+   "welch_t": 2.0634725894988915,
+   "welch_p": 0.044448257076921315
+  },
+  "older_gt_median": {
+   "n_UIH": 26,
+   "n_GE": 34,
+   "median_age_split": 54.0,
+   "UIH_mean": 65.40980921328864,
+   "GE_mean": 63.61617913618922,
+   "diff": 1.7936300770994222,
+   "welch_t": 1.0284392288385944,
+   "welch_p": 0.3081150693801545
+  }
+ }
+}
