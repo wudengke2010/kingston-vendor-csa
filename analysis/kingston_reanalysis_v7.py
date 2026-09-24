@@ -315,6 +315,27 @@ for label, sub in [('younger_le_median', wc[wc.age <= med_age]), ('older_gt_medi
                          'welch_t': float(t_st), 'welch_p': float(p_st)}
 R['age_stratified_v7'] = strata
 
+# ============ 年龄三分位分层 (S3.3 程序化导出: 20-39/40-59/60-86) ============
+tert = []
+for lo, hi in [(20, 39), (40, 59), (60, 86)]:
+    sub = wc[(wc.age >= lo) & (wc.age <= hi)]
+    u = sub[sub.vendor == 'UIH'].mean_csa.values
+    g = sub[sub.vendor == 'GE'].mean_csa.values
+    t_st, p_st = stats.ttest_ind(u, g, equal_var=False)
+    vu, vg = u.var(ddof=1), g.var(ddof=1)
+    se = np.sqrt(vu/len(u) + vg/len(g))
+    dfw = (vu/len(u) + vg/len(g))**2 / ((vu/len(u))**2/(len(u)-1) + (vg/len(g))**2/(len(g)-1))
+    tcrit = stats.t.ppf(0.95, dfw)
+    d = u.mean() - g.mean()
+    tert.append({'label': f'{lo}-{hi} y', 'n_UIH': int(len(u)), 'n_GE': int(len(g)),
+                 'UIH_mean': float(u.mean()), 'UIH_sd': float(u.std(ddof=1)),
+                 'GE_mean': float(g.mean()), 'GE_sd': float(g.std(ddof=1)),
+                 'diff': float(d), 'ci90': [float(d - tcrit*se), float(d + tcrit*se)],
+                 'welch_t': float(t_st), 'welch_p': float(p_st)})
+R['age_stratified_tertiles_v7'] = {
+    'method': 'decade strata 20-39/40-59/60-86, whole-cord endpoint, Welch t, 90% CI',
+    'strata': tert}
+
 # ============ 保存 ============
 out = 'C:/Users/admin/WorkBuddy/2026-07-05-05-44-50/reanalysis_v7_results.json'
 with open(out, 'w', encoding='utf-8') as fp:
