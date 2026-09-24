@@ -1,7 +1,7 @@
 """
 Phase 6: Per-level CSA analysis
 Uses sct_label_vertebrae to label vertebral bodies, then sct_process_segmentation
-to extract per-level CSA at C2/C3/C4/C5.
+to extract per-level CSA at C2-C7 (-vert 2:7).
 
 Runs on the COMBINED cohort (batch1 Moderate-48 + batch2 QC+DCM passed).
 """
@@ -38,19 +38,17 @@ def run_sct_label_vertebrae(nifti_path, seg_path, output_dir, patient_id):
     except:
         pass
     
-    # Use sct_label_vertebrae command
+    # Use sct_label_vertebrae command (no -initfile: automatic initial labelling;
+    # an -initfile with an empty value would make sct_label_vertebrae consume the
+    # next flag as its argument, which was a bug in earlier versions of this script)
     cmd = [
         os.path.join(SCT_BIN, "sct_label_vertebrae"),
         "-i", nifti_path,
         "-s", seg_path,
         "-c", "t2",
-        "-initfile", "",  # May need init label
         "-ofile", label_file,
         "-v", "0",
     ]
-    
-    # Remove empty initfile if not needed
-    cmd = [c for c in cmd if c != ""]
     
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
@@ -68,7 +66,7 @@ def run_sct_process_segmentation_perlevel(seg_path, label_file, output_csv, pati
     cmd = [
         os.path.join(SCT_BIN, "sct_process_segmentation"),
         "-i", seg_path,
-        "-vert", "2:5",  # C2 to C5
+        "-vert", "2:7",  # C2 to C7
         "-vertfile", label_file,
         "-o", output_csv,
         "-v", "0",
@@ -116,7 +114,7 @@ def process_patient_perlevel(patient_id, nifti_path, seg_path, vendor, age, sex,
 
 def main():
     logger.info("=" * 60)
-    logger.info("Per-level CSA Analysis (C2/C3/C4/C5)")
+    logger.info("Per-level CSA Analysis (C2-C7)")
     logger.info("=" * 60)
     
     os.makedirs(OUTPUT_ROOT, exist_ok=True)
@@ -176,7 +174,7 @@ def main():
         logger.info(f"\nSaved: perlevel_csa_all.csv ({len(combined_df)} rows)")
         
         # Summary by level and vendor
-        for vert in [2, 3, 4, 5]:
+        for vert in [2, 3, 4, 5, 6, 7]:
             level_df = combined_df[combined_df['VertLevel'] == vert]
             for v in ['UIH', 'GE']:
                 v_df = level_df[level_df['vendor'] == v]
